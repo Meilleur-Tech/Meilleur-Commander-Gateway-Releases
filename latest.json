@@ -1,0 +1,10 @@
+{
+  "schema": "meilleur-commander-gateway-update/v1",
+  "channel": "beta",
+  "status": "unpublished",
+  "version": null,
+  "source_sha": null,
+  "tag": null,
+  "published_at": null,
+  "assets": {}
+}
