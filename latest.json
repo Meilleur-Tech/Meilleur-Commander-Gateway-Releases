@@ -1,20 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:b2d5d7196732efad9504c67bbfe2b92753675e9efce4976147dae94001b97012",
+  "gateway_oci_digest": "sha256:71629abd59823ecdd91f544fee07f6e87ae561be145a2e499d72d663cb8c6eea",
   "kits": {
     "linux-vm": {
-      "bytes": 894292926,
-      "sha256": "8039e1ae1d0232e960ef28c5d171d66962c6ebec2debc91588b99d3d7c96d4c1",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.21/meilleur-commander-linux-vm-2.1.0-beta.21.tar.gz"
+      "bytes": 894230116,
+      "sha256": "b4fbfeff0520f7edaeb29129150bde8d0ac87e52ace63dad2ecc51031f24135f",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.21.1/meilleur-commander-linux-vm-2.1.0-beta.21.1.tar.gz"
+    },
+    "unraid": {
+      "bytes": 894238191,
+      "sha256": "7e2c8d757b05d3a8fa7eb93e39dfd9d9aa9822f5853bbc5591883a71fd9f96ba",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.21.1/meilleur-commander-unraid-2.1.0-beta.21.1.tar.gz"
     }
   },
-  "notes": "Meilleur Commander Gateway 2.1.0-beta.21: one-click updates from this channel, Backup Center, macOS Companion and Gateway field fixes. Notes: https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.1.0-beta.21",
-  "published_at": "2026-10-17T06:27:18Z",
+  "notes": "Meilleur Commander Gateway 2.1.0-beta.21.1: distributable Unraid kit, site config for split-root installations, release image retention. Notes: https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.1.0-beta.21.1",
+  "published_at": "2026-10-17T09:16:55Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "a39c07b7daa46f2efed6b962e66cda017eb1f62e",
-  "source_tree": "903d3ddac9bde5bd9b1acb19c447ce464043c22d",
+  "source_sha": "497f129dd4912693cad59fc23b8b92821e70c9a8",
+  "source_tree": "d2feeeb3ad47d9eed4f368c375dc9eecf79a0841",
   "status": "published",
-  "tag": "v2.1.0-beta.21",
-  "version": "2.1.0-beta.21",
-  "worker_oci_digest": "sha256:cc951959fc6deac1ae18eb1ae4cea7b947f4a4b6e59386c3e5ee2fc5674c1f05"
+  "tag": "v2.1.0-beta.21.1",
+  "version": "2.1.0-beta.21.1",
+  "worker_oci_digest": "sha256:3b3b9a59868a4ead62671a7d59221880f62bedb0bb6e1647853d935f42a584e6"
 }
