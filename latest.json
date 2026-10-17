@@ -1,10 +1,20 @@
 {
-  "schema": "meilleur-commander-gateway-update/v1",
   "channel": "beta",
-  "status": "unpublished",
-  "version": null,
-  "source_sha": null,
-  "tag": null,
-  "published_at": null,
-  "assets": {}
+  "gateway_oci_digest": "sha256:b2d5d7196732efad9504c67bbfe2b92753675e9efce4976147dae94001b97012",
+  "kits": {
+    "linux-vm": {
+      "bytes": 894292926,
+      "sha256": "8039e1ae1d0232e960ef28c5d171d66962c6ebec2debc91588b99d3d7c96d4c1",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.21/meilleur-commander-linux-vm-2.1.0-beta.21.tar.gz"
+    }
+  },
+  "notes": "Meilleur Commander Gateway 2.1.0-beta.21: one-click updates from this channel, Backup Center, macOS Companion and Gateway field fixes. Notes: https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.1.0-beta.21",
+  "published_at": "2026-10-17T06:27:18Z",
+  "schema": "meilleur-commander-gateway-update/v2",
+  "source_sha": "a39c07b7daa46f2efed6b962e66cda017eb1f62e",
+  "source_tree": "903d3ddac9bde5bd9b1acb19c447ce464043c22d",
+  "status": "published",
+  "tag": "v2.1.0-beta.21",
+  "version": "2.1.0-beta.21",
+  "worker_oci_digest": "sha256:cc951959fc6deac1ae18eb1ae4cea7b947f4a4b6e59386c3e5ee2fc5674c1f05"
 }

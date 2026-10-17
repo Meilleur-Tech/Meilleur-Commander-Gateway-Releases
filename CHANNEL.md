@@ -1,19 +1,19 @@
 # Gateway beta update channel
 
-This **public** repository distributes the Meilleur Commander Gateway's explicitly released, **public-distribution-approved** binaries and a credential-free beta update manifest. This channel is intended for the transition to a Control Plane managed update service.
+This **public** repository distributes audited, distributable Meilleur Commander Gateway beta releases and the signed beta update catalog used by the Gateway Update Center (Owner decision 2026-10-17, Meilleur-Commander #1222).
 
-## Stable manifest URL
-`https://raw.githubusercontent.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/main/latest.json`
+## Catalog
 
-This URL is **not** GitHub's `/releases/latest`: GitHub generally excludes prereleases from that endpoint, and the `2.1.0-beta.*` lane consists of prereleases.
+- `latest.json` — schema `meilleur-commander-gateway-update/v2`, channel `beta`: version, tag, source SHA/tree, Gateway and Project Worker OCI digests, release notes and per-platform kit URL, SHA-256 and size.
+- `latest.json.sig` — base64 RSA-SHA256 signature over the exact bytes of `latest.json`.
 
-## Safety and release contract
-- `latest.json` starts as `unpublished`: **do not update** when no release exists.
-- Before updating, validate schema, channel, semver, HTTPS destination, exact GitHub release/tag, SHA256, and provenance. Never run arbitrary shell instructions from a remote manifest.
-- Choose only explicitly supported artifacts for the current deployment flavor and architecture.
-- Download to a temporary location; verify the entire downloaded file against its SHA256 checksum and the signed/verified release provenance, then use the existing preflight, backup, health, and rollback flows.
-- Owner/internal assets, credentials, tokens, entitlement secrets, signing private keys, and unrestricted admin builds must **never** be published.
-- Releasing beta19.1 requires a separate approved distributable build and successful isolated QA; this repository alone does **not** enable production auto-updates.
-- Longer term, move manifest discovery, entitlements and trust policy to the Control Plane.
+Gateways fetch both anonymously from `https://raw.githubusercontent.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/main/latest.json` (+ `.sig`), verify the signature with the public key shipped in their installed kit, accept only kit URLs on this repository's immutable release tag, download the kit, verify size, SHA-256 and the kit's embedded release identity, take a backup and install through their host recovery plane with automatic rollback. A catalog without a valid signature is ignored. Only versions newer than the installed one are offered.
 
-Maintainers must update the manifest **only after** the release is actually published and the checksum and source identity are checked. The manifest should reference immutable versioned release assets rather than mutable `latest` asset names.
+## Release process
+
+1. A release is built from an exact source commit of `Meilleur-Tech/Meilleur-Commander` and QA-tested.
+2. Every kit is audited for secrets, private keys and installation-specific data before it is published here.
+3. The GitHub pre-release with kits, manifest, `SHA256SUMS` and `INSTALL.md` is published first and verified by an anonymous download.
+4. Only then are `latest.json` and `latest.json.sig` updated together in one commit.
+
+Platform kits that fail the distribution audit are withheld (2.1.0-beta.21: Unraid kit withheld; Linux-VM kit published). Licensing/entitlement enforcement is a later, separate extension.
