@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:71629abd59823ecdd91f544fee07f6e87ae561be145a2e499d72d663cb8c6eea",
+  "gateway_oci_digest": "sha256:823d950b34591799360915d555f613a5d920051f171d459ef3d3ac6f9e993e19",
   "kits": {
     "linux-vm": {
-      "bytes": 894230116,
-      "sha256": "b4fbfeff0520f7edaeb29129150bde8d0ac87e52ace63dad2ecc51031f24135f",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.21.1/meilleur-commander-linux-vm-2.1.0-beta.21.1.tar.gz"
+      "bytes": 914627867,
+      "sha256": "4c4faa2e13758e2d5be5b9d606cc18f1c5e8fa21e0d1c0cc58371ca5c6efb6df",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.23/meilleur-commander-linux-vm-2.1.0-beta.23.tar.gz"
     },
     "unraid": {
-      "bytes": 894238191,
-      "sha256": "7e2c8d757b05d3a8fa7eb93e39dfd9d9aa9822f5853bbc5591883a71fd9f96ba",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.21.1/meilleur-commander-unraid-2.1.0-beta.21.1.tar.gz"
+      "bytes": 914637178,
+      "sha256": "1f6e2b08711e8bd92bd89e52874ee7dd892d2fecfd48cfad7ed90d62c85a5a18",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0-beta.23/meilleur-commander-unraid-2.1.0-beta.23.tar.gz"
     }
   },
-  "notes": "Meilleur Commander Gateway 2.1.0-beta.21.1: distributable Unraid kit, site config for split-root installations, release image retention. Notes: https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.1.0-beta.21.1",
-  "published_at": "2026-10-17T09:16:55Z",
+  "notes": "Meilleur Commander Gateway 2.1.0-beta.23: stable-ready update contract (later 2.1.0/2.1.1 install from this channel), public kit distribution audit, direct update from Beta 21.3 and 22. Notes: https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.1.0-beta.23",
+  "published_at": "2026-10-23T23:18:48Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "497f129dd4912693cad59fc23b8b92821e70c9a8",
-  "source_tree": "d2feeeb3ad47d9eed4f368c375dc9eecf79a0841",
+  "source_sha": "2045925f92381ff699f4f51596bdea1460b11079",
+  "source_tree": "b002e80ce8b5b9e96aebb1078eafc85435101d4c",
   "status": "published",
-  "tag": "v2.1.0-beta.21.1",
-  "version": "2.1.0-beta.21.1",
-  "worker_oci_digest": "sha256:3b3b9a59868a4ead62671a7d59221880f62bedb0bb6e1647853d935f42a584e6"
+  "tag": "v2.1.0-beta.23",
+  "version": "2.1.0-beta.23",
+  "worker_oci_digest": "sha256:7b632f6125a38d647323301b723d1f016049839286283a877b4d794747cf87cf"
 }

@@ -16,4 +16,4 @@ Gateways fetch both anonymously from `https://raw.githubusercontent.com/Meilleur
 3. The GitHub pre-release with kits, manifest, `SHA256SUMS` and `INSTALL.md` is published first and verified by an anonymous download.
 4. Only then are `latest.json` and `latest.json.sig` updated together in one commit.
 
-Platform kits that fail the distribution audit are withheld (2.1.0-beta.21: Unraid kit withheld; from 2.1.0-beta.21.1 both kits are published). Licensing/entitlement enforcement is a later, separate extension.
+Platform kits that fail the distribution audit are withheld (2.1.0-beta.21: Unraid kit withheld; from 2.1.0-beta.21.1 both kits are published). From 2.1.0-beta.23, installed gateways accept stable releases (2.1.0, 2.1.1, …) on this same signed `beta` channel; a stable sorts after its Betas and a Beta is never offered over an installed stable. Licensing/entitlement enforcement is a later, separate extension.
