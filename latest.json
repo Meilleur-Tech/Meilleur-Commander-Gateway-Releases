@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:2b0c22d2a472868f0036398650a7e37f2c035d445d87c956cdaa31613a2bd056",
+  "gateway_oci_digest": "sha256:4866fa4cbc313491eefe4ad86b058ebfc1035469109b865797f79b0b1f0947a6",
   "kits": {
     "linux-vm": {
-      "bytes": 914642160,
-      "sha256": "5014121c6b3b0086b9a8bc7818ad761fb0a3e702e16fb0bed3e461dcba5818a5",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0/meilleur-commander-linux-vm-2.1.0.tar.gz"
+      "bytes": 917572709,
+      "sha256": "a81b781477a155fdd318a6e235f39e2f97c45569a77a498d6718eb6e734485c2",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.1/meilleur-commander-linux-vm-2.1.1.tar.gz"
     },
     "unraid": {
-      "bytes": 914650872,
-      "sha256": "879bbc9e49a6d0b419a30321cc55da8af8baabd4c55340086e4ab0be3c22e834",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.0/meilleur-commander-unraid-2.1.0.tar.gz"
+      "bytes": 917582220,
+      "sha256": "b196540253753ca15e6a7a5c6a905330ecac6a24fc128db476cd2f1b1c1781d1",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.1/meilleur-commander-unraid-2.1.1.tar.gz"
     }
   },
-  "notes": "Meilleur Commander Gateway 2.1.0 (stable): first stable Gateway on the signed channel; Unraid Project Worker process broker fix; native macOS bootstrap chunk integrity. Notes: https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.1.0",
-  "published_at": "2026-10-24T10:00:28Z",
+  "notes": "Gateway 2.1.1: Unraid Update Center checks every Gateway start prerequisite before stopping the running Gateway (#1532); Unraid Project Worker processes run (#1470); automatic ChatGPT chat titles via Companion pairing (#1227); exact signed macOS artifact routes (#1486, #1513); project_guard without legacy Mac fallback (#1451); MeilleurCodeGuard 4.6.2. Install from Update Center (explicit click).",
+  "published_at": "2026-10-26T21:20:52Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "8a05e6343edc813ee97e873431816ef59ccb8d34",
-  "source_tree": "6f48c732f79327e90b8a9fded906c452f533766c",
+  "source_sha": "e03af2229d4634cb848755599592126c0e94a2dd",
+  "source_tree": "0135ad978ae20216f7f79f7564c7bb640d27e1b3",
   "status": "published",
-  "tag": "v2.1.0",
-  "version": "2.1.0",
-  "worker_oci_digest": "sha256:ea29160ac4c644632239b7b2b604470c7df57c8df47fd079c44383ecc0b30830"
+  "tag": "v2.1.1",
+  "version": "2.1.1",
+  "worker_oci_digest": "sha256:fa6bf722c81b9d2a4b3f3cb3be7bfdf00ec345783f511862987861e263161b1a"
 }
