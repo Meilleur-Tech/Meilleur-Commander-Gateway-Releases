@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:4866fa4cbc313491eefe4ad86b058ebfc1035469109b865797f79b0b1f0947a6",
+  "gateway_oci_digest": "sha256:f07d2e33966fda4ddf5f75cdac52faf8ba48e0b9d8d495a5cd74661f90d9a7bb",
   "kits": {
     "linux-vm": {
-      "bytes": 917572709,
-      "sha256": "a81b781477a155fdd318a6e235f39e2f97c45569a77a498d6718eb6e734485c2",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.1/meilleur-commander-linux-vm-2.1.1.tar.gz"
+      "bytes": 908806187,
+      "sha256": "c3b9cb5556b8515282b38388fb6993092fef1c3be681d93e96002b5b4b809a11",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.16/meilleur-commander-linux-vm-2.1.16.tar.gz"
     },
     "unraid": {
-      "bytes": 917582220,
-      "sha256": "b196540253753ca15e6a7a5c6a905330ecac6a24fc128db476cd2f1b1c1781d1",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.1/meilleur-commander-unraid-2.1.1.tar.gz"
+      "bytes": 908817455,
+      "sha256": "bd4d54d05f40102c47ae2975bc8150999172340ff15a245bad318745cd9025d9",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.16/meilleur-commander-unraid-2.1.16.tar.gz"
     }
   },
-  "notes": "Gateway 2.1.1: Unraid Update Center checks every Gateway start prerequisite before stopping the running Gateway (#1532); Unraid Project Worker processes run (#1470); automatic ChatGPT chat titles via Companion pairing (#1227); exact signed macOS artifact routes (#1486, #1513); project_guard without legacy Mac fallback (#1451); MeilleurCodeGuard 4.6.2. Install from Update Center (explicit click).",
-  "published_at": "2026-10-26T21:20:52Z",
+  "notes": "Gateway 2.1.16: Owner project context and project switching without MeilleurCodeGuard, Writer or task-ledger binding (#1663, #1680); platform-neutral Owner dispatch to registered macOS, Linux and Windows targets (#1639); WebUI reaches registered targets on LAN-bound Gateways (#1649); Owner project Guard and Writer hardening (#1480, #1578, #1619). Install from Update Center (explicit click).",
+  "published_at": "2026-11-03T17:50:45Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "e03af2229d4634cb848755599592126c0e94a2dd",
-  "source_tree": "0135ad978ae20216f7f79f7564c7bb640d27e1b3",
+  "source_sha": "af43926d90b3e2c55087561081b913acd0f59a9e",
+  "source_tree": "5ca71dad3c2c7fba0e9e13e9cc3a519aead5166b",
   "status": "published",
-  "tag": "v2.1.1",
-  "version": "2.1.1",
-  "worker_oci_digest": "sha256:fa6bf722c81b9d2a4b3f3cb3be7bfdf00ec345783f511862987861e263161b1a"
+  "tag": "v2.1.16",
+  "version": "2.1.16",
+  "worker_oci_digest": "sha256:8c3c72241c41947aec4b4c5d25a9b91e6e72237df0b918097a1417cb8e1e8e1d"
 }
