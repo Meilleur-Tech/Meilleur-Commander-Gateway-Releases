@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:f07d2e33966fda4ddf5f75cdac52faf8ba48e0b9d8d495a5cd74661f90d9a7bb",
+  "gateway_oci_digest": "sha256:9b1b96219120acd2182391624f9dde30e5f00b886f0e6749d65b2a6ea13a6a1d",
   "kits": {
     "linux-vm": {
-      "bytes": 908806187,
-      "sha256": "c3b9cb5556b8515282b38388fb6993092fef1c3be681d93e96002b5b4b809a11",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.16/meilleur-commander-linux-vm-2.1.16.tar.gz"
+      "bytes": 908798696,
+      "sha256": "70b7d0467509543d995d8f94b53685aa299e87c516847dae87f998692af5ab8f",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.17/meilleur-commander-linux-vm-2.1.17.tar.gz"
     },
     "unraid": {
-      "bytes": 908817455,
-      "sha256": "bd4d54d05f40102c47ae2975bc8150999172340ff15a245bad318745cd9025d9",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.16/meilleur-commander-unraid-2.1.16.tar.gz"
+      "bytes": 908809437,
+      "sha256": "f694712acd7cc3fd0252addd331b80b55a226aba7b9a292e831d0e2a548ff22a",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.17/meilleur-commander-unraid-2.1.17.tar.gz"
     }
   },
-  "notes": "Gateway 2.1.16: Owner project context and project switching without MeilleurCodeGuard, Writer or task-ledger binding (#1663, #1680); platform-neutral Owner dispatch to registered macOS, Linux and Windows targets (#1639); WebUI reaches registered targets on LAN-bound Gateways (#1649); Owner project Guard and Writer hardening (#1480, #1578, #1619). Install from Update Center (explicit click).",
-  "published_at": "2026-11-03T17:50:45Z",
+  "notes": "Gateway 2.1.17: stall-bounded kit downloads for future updates (#1699); Owner project tools for legacy device-target registrations (#1671); macOS sandbox accepts older Homebrew python@3.14 and node@24 (#1676). Install from Update Center (explicit click).",
+  "published_at": "2026-11-04T00:08:57Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "af43926d90b3e2c55087561081b913acd0f59a9e",
-  "source_tree": "5ca71dad3c2c7fba0e9e13e9cc3a519aead5166b",
+  "source_sha": "04c6440a5e79a758d52422c5e9403d8c67ffa39b",
+  "source_tree": "271b1a40d9cce14583f0f8ba4a504f708bec8d11",
   "status": "published",
-  "tag": "v2.1.16",
-  "version": "2.1.16",
-  "worker_oci_digest": "sha256:8c3c72241c41947aec4b4c5d25a9b91e6e72237df0b918097a1417cb8e1e8e1d"
+  "tag": "v2.1.17",
+  "version": "2.1.17",
+  "worker_oci_digest": "sha256:504819e2f4da86c0327637151ed6022b6d0463db0dcb5b67fbda57f9c06dd7df"
 }
