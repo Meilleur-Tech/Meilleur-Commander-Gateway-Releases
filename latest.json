@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:9b1b96219120acd2182391624f9dde30e5f00b886f0e6749d65b2a6ea13a6a1d",
+  "gateway_oci_digest": "sha256:db19d2f90fe6531cbdb30457e95bb0790c9c3ece156306d3e3ddb2955cc0ab67",
   "kits": {
     "linux-vm": {
-      "bytes": 908798696,
-      "sha256": "70b7d0467509543d995d8f94b53685aa299e87c516847dae87f998692af5ab8f",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.17/meilleur-commander-linux-vm-2.1.17.tar.gz"
+      "bytes": 908835338,
+      "sha256": "0270bd2acb288d2a1d943395d590bb11e0823ff92f5ee948972cce4d30096634",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.18/meilleur-commander-linux-vm-2.1.18.tar.gz"
     },
     "unraid": {
-      "bytes": 908809437,
-      "sha256": "f694712acd7cc3fd0252addd331b80b55a226aba7b9a292e831d0e2a548ff22a",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.17/meilleur-commander-unraid-2.1.17.tar.gz"
+      "bytes": 908846545,
+      "sha256": "342c269fb8b30fefb5e97402d681bea59719de10f53497ca38f6b57d41745803",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.18/meilleur-commander-unraid-2.1.18.tar.gz"
     }
   },
-  "notes": "Gateway 2.1.17: stall-bounded kit downloads for future updates (#1699); Owner project tools for legacy device-target registrations (#1671); macOS sandbox accepts older Homebrew python@3.14 and node@24 (#1676). Install from Update Center (explicit click).",
-  "published_at": "2026-11-04T00:08:57Z",
+  "notes": "Gateway 2.1.18: complete target_exec output and exit code on Linux SSH targets (#1394); Owner project_list and project_clear (#1710). Install from Update Center (explicit click).",
+  "published_at": "2026-11-04T09:43:20Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "04c6440a5e79a758d52422c5e9403d8c67ffa39b",
-  "source_tree": "271b1a40d9cce14583f0f8ba4a504f708bec8d11",
+  "source_sha": "bdee7a616849d5cb39ca7637d16b7d54c74e1d9f",
+  "source_tree": "27229e263f38cd6aea850638b3cb0e1bdb2eae4b",
   "status": "published",
-  "tag": "v2.1.17",
-  "version": "2.1.17",
-  "worker_oci_digest": "sha256:504819e2f4da86c0327637151ed6022b6d0463db0dcb5b67fbda57f9c06dd7df"
+  "tag": "v2.1.18",
+  "version": "2.1.18",
+  "worker_oci_digest": "sha256:1f242bae316aeb0dce60ddbf1df0c4b86ee740e3e96c2050ea53a76563f5a1ab"
 }
