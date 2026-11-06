@@ -1,4 +1,2 @@
-e2357f297ef8172d6ab7a00a1381f16d223f5350b044388b7ebb60dabe11cdd7  INSTALL.md
-901b6d8b10511a03289e70fb2e3fdecc9550cee829b168b8e6d5bdfbda836c86  meilleur-commander-2.1.19-platform-release.json
 3735a2ab7053545745c2e41c4222dbd71e04de16a00908bb6a8baab67da0ce9e  meilleur-commander-linux-vm-2.1.19.tar.gz
 bde2fde2aa530d789f550e9c41c6fec7f8256c62531d40fba3f53082425903b6  meilleur-commander-unraid-2.1.19.tar.gz
