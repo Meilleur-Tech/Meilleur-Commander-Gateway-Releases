@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:db19d2f90fe6531cbdb30457e95bb0790c9c3ece156306d3e3ddb2955cc0ab67",
+  "gateway_oci_digest": "sha256:6fe2f7b3850e992b77dbc91bd84dc35375599f09494fbdedd2337be83831826f",
   "kits": {
     "linux-vm": {
-      "bytes": 908835338,
-      "sha256": "0270bd2acb288d2a1d943395d590bb11e0823ff92f5ee948972cce4d30096634",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.18/meilleur-commander-linux-vm-2.1.18.tar.gz"
+      "bytes": 909428333,
+      "sha256": "3735a2ab7053545745c2e41c4222dbd71e04de16a00908bb6a8baab67da0ce9e",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.19/meilleur-commander-linux-vm-2.1.19.tar.gz"
     },
     "unraid": {
-      "bytes": 908846545,
-      "sha256": "342c269fb8b30fefb5e97402d681bea59719de10f53497ca38f6b57d41745803",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.18/meilleur-commander-unraid-2.1.18.tar.gz"
+      "bytes": 909439427,
+      "sha256": "bde2fde2aa530d789f550e9c41c6fec7f8256c62531d40fba3f53082425903b6",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.19/meilleur-commander-unraid-2.1.19.tar.gz"
     }
   },
-  "notes": "Gateway 2.1.18: complete target_exec output and exit code on Linux SSH targets (#1394); Owner project_list and project_clear (#1710). Install from Update Center (explicit click).",
-  "published_at": "2026-11-04T09:43:20Z",
+  "notes": "Gateway 2.1.19: adds separately signed Linux x86_64 and ARM64 GUI/headless release channels and improves Update Center verification state. Isolated Unraid clone update, health checks, and automatic rollback passed.",
+  "published_at": "2026-11-07T00:54:44Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "bdee7a616849d5cb39ca7637d16b7d54c74e1d9f",
-  "source_tree": "27229e263f38cd6aea850638b3cb0e1bdb2eae4b",
+  "source_sha": "d6ba42010be0cf511db9c16070cb18a9cc302ed5",
+  "source_tree": "895da6d0f3dc72906fba78ede367818c3941c446",
   "status": "published",
-  "tag": "v2.1.18",
-  "version": "2.1.18",
-  "worker_oci_digest": "sha256:1f242bae316aeb0dce60ddbf1df0c4b86ee740e3e96c2050ea53a76563f5a1ab"
+  "tag": "v2.1.19",
+  "version": "2.1.19",
+  "worker_oci_digest": "sha256:7af2a2267cb221f34836df4532b77f70680c5176a55c49934ddc620246726284"
 }

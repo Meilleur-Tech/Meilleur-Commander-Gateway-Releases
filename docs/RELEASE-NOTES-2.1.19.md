@@ -1,6 +1,6 @@
-# Meilleur Commander Gateway 2.1.19 — QA passed, publication pending
+# Meilleur Commander Gateway 2.1.19
 
-**Availability:** 2.1.19 is not yet publicly available for installation. The latest public version remains 2.1.18 while the binary release and signed `beta` catalog are prepared for publication.
+**Availability:** 2.1.19 is the latest public Gateway release and is listed in the signed `beta` update catalog.
 
 ## Included changes
 
@@ -28,13 +28,13 @@ The read-only R2 readback independently verified all eight original objects and 
 
 ## Installation and recovery
 
-When 2.1.19 is published and present in the signed catalog, supported installations use **Updates → Gateway-Updates** and explicitly confirm **Install**. The host recovery plane verifies the signature and package identity, makes a pre-update backup, stages the candidate, checks health and release identity, and automatically rolls back on activation failure. Do not install this release candidate before the public release and catalog are available. Keep the prior image and backup until the new Gateway and Worker are verified.
+Supported installations use **Updates → Gateway-Updates** and explicitly confirm **Install**. The host recovery plane verifies the signature and package identity, makes a pre-update backup, stages the kit, checks health and release identity, and automatically rolls back on activation failure. Keep the prior image and backup until the new Gateway and Worker are verified.
 
 ## Verification status
 
 - Trusted build, original R2 objects, both package identities, and both recursive binary/secret audits: **PASS**.
-- Isolated Unraid clone update to 2.1.19, Gateway and WebUI health, immutable Gateway/Worker identity, and automatic rollback to the 2.1.1 known-good image after an injected QA-only health failure: **PASS**.
-- Public binary-only release and anonymous download verification: **pending**.
-- Signed public update catalog: **pending**.
-- PROD installation: **not performed**; PROD remains 2.1.18 until the required gates pass.
+- Isolated Unraid clone update to 2.1.19, Gateway and WebUI health, immutable Gateway/Worker image identity, and automatic rollback to the 2.1.1 known-good image after an injected QA-only health failure: **PASS**.
+- Public binary-only release and anonymous GET/SHA-256 verification of all seven release assets: **PASS**.
+- Signed `beta` catalog: **PASS**; signature verified with the pinned public key after publication.
+- Production rollout is separate from this public release and is not claimed here.
 

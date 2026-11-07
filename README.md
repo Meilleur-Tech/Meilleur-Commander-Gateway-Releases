@@ -4,7 +4,7 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-The latest public Gateway release remains **2.1.18** until the 2.1.19 release and signed update catalog are published. The audited **2.1.19** candidate has passed isolated Unraid clone update, health, and automatic rollback checks. Its release notes, package hashes, and installation guidance are published; the public binary download and beta catalog entry are still pending.
+The latest public Gateway release is **2.1.19**. Its signed beta catalog points to the verified Linux VM and Unraid kits. The isolated Unraid clone update, health, and automatic rollback checks passed.
 
 - [2.1.19 release notes and gate status](docs/RELEASE-NOTES-2.1.19.md)
 - [Installation and upgrade instructions](docs/INSTALLATION.md)

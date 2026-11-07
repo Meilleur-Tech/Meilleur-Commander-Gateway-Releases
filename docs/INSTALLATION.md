@@ -1,10 +1,10 @@
 # Gateway installation and upgrades
 
-These instructions cover Meilleur Commander Gateway 2.1.19 for an x86_64 Debian/Ubuntu Linux VM or an Unraid host. The Gateway release does not include desktop client packages. The 2.1.19 candidate passed isolated Unraid clone update, health, and automatic rollback checks; its public release and signed-catalog promotion are still pending. Until the catalog and release page advertise 2.1.19, continue using the latest published release, currently 2.1.18.
+These instructions cover Meilleur Commander Gateway 2.1.19 for an x86_64 Debian/Ubuntu Linux VM or an Unraid host. The Gateway release does not include desktop client packages. Version 2.1.19 is publicly released and available in the signed beta catalog. Isolated Unraid clone update, health, and automatic rollback checks passed.
 
 ## Before installation
 
-Use the kit for the actual host: `meilleur-commander-linux-vm-2.1.19.tar.gz` for the supported Linux VM platform or `meilleur-commander-unraid-2.1.19.tar.gz` for Unraid. Require x86_64, a supported Debian/Ubuntu or Unraid host, Docker access, and sufficient free space for the new images plus the pre-update backup. Do not use a kit for another platform. Do not install a candidate until its tagged GitHub release and signed catalog entry are public.
+Use the kit for the actual host: `meilleur-commander-linux-vm-2.1.19.tar.gz` for the supported Linux VM platform or `meilleur-commander-unraid-2.1.19.tar.gz` for Unraid. Require x86_64, a supported Debian/Ubuntu or Unraid host, Docker access, and sufficient free space for the new images plus the pre-update backup. Do not use a kit for another platform.
 
 After publication, download the release assets and verify them from the same directory before installation:
 
@@ -22,7 +22,7 @@ A new public release can take up to five minutes to appear in an already-open Up
 
 ## Older installations
 
-Installations without the Gateway Update Center need the platform-specific one-time bootstrap documented by the release that introduced the recovery plane. Follow that release's `INSTALL.md` and use only the matching, checksum-verified platform kit. The 2.1.19 candidate has not yet been approved for this path. Do not bootstrap it until its public release and signed catalog are available.
+Installations without the Gateway Update Center need the platform-specific one-time bootstrap documented by the release that introduced the recovery plane. Follow that release's `INSTALL.md` and use only the matching, checksum-verified platform kit.
 
 ## Rollback
 
