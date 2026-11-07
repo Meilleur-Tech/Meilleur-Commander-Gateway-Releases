@@ -1,6 +1,6 @@
 # Gateway troubleshooting
 
-This guide covers the Linux VM and Unraid Gateway kits, including the 2.1.19 candidate. The 2.1.19 candidate is not yet public or approved for installation; the current public release remains 2.1.18. Use only steps that match the platform and release actually installed.
+This guide covers the Linux VM and Unraid Gateway kits, including the 2.1.19 candidate. The candidate passed isolated Unraid clone update, health, and automatic rollback checks, but it is not publicly installable until the binary release and signed catalog are published. The current public release remains 2.1.18. Use only steps that match the platform and release actually installed.
 
 ## Release is not offered
 

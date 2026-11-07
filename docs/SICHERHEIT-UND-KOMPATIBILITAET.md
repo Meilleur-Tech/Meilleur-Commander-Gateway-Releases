@@ -1,12 +1,12 @@
 # Gateway security and compatibility
 
-Meilleur Commander Gateway 2.1.19 is a Linux-hosted Gateway and Project Worker release candidate for x86_64 Debian/Ubuntu VMs and Unraid. It is not yet publicly released; 2.1.18 remains the latest public release until isolated QA and catalog promotion pass. This repository distributes binary-only platform kits, not the Commander source tree or native desktop clients.
+Meilleur Commander Gateway 2.1.19 is a Linux-hosted Gateway and Project Worker release candidate for x86_64 Debian/Ubuntu VMs and Unraid. The candidate passed isolated Unraid clone update, health, and automatic rollback checks. It is not yet publicly released; 2.1.18 remains the latest public release until the binary release and signed catalog are published. This repository distributes binary-only platform kits, not the Commander source tree or native desktop clients.
 
 ## Release verification
 
 The Gateway Update Center accepts a release only through the RSA-SHA256 signed catalog and its pinned public key. The catalog binds version, source commit/tree, Gateway and Project Worker OCI digests, and each platform kit's immutable URL, byte size, and SHA-256. The installer verifies the kit and embedded release identity before staging. Keep these checks enabled. A valid checksum alone does not replace catalog-signature or source-identity verification.
 
-The 2.1.19 candidate was built from source commit `d6ba42010be0cf511db9c16070cb18a9cc302ed5` and tree `895da6d0f3dc72906fba78ede367818c3941c446`. Its two platform kits passed package verification and recursive binary/secret audit. Isolated Gateway QA, rollback, public release publication, and signed-catalog promotion remain pending; these are not security claims about a released version.
+The 2.1.19 candidate was built from source commit `d6ba42010be0cf511db9c16070cb18a9cc302ed5` and tree `895da6d0f3dc72906fba78ede367818c3941c446`. Its two platform kits passed package verification and recursive binary/secret audit. Isolated clone update, Gateway/WebUI health, and automatic rollback passed. Public release publication and signed-catalog promotion remain pending; these are not security claims about a publicly released version.
 
 ## Platform and client boundaries
 

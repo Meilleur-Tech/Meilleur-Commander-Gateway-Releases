@@ -1,6 +1,6 @@
-# Meilleur Commander Gateway 2.1.19 — release candidate, not yet published
+# Meilleur Commander Gateway 2.1.19 — QA passed, publication pending
 
-**Availability:** 2.1.19 is not yet available for installation. The latest public version remains 2.1.18. The public release and signed `beta` catalog will be updated only after isolated Gateway QA, rollback, and release gates pass.
+**Availability:** 2.1.19 is not yet publicly available for installation. The latest public version remains 2.1.18 while the binary release and signed `beta` catalog are prepared for publication.
 
 ## Included changes
 
@@ -33,7 +33,7 @@ When 2.1.19 is published and present in the signed catalog, supported installati
 ## Verification status
 
 - Trusted build, original R2 objects, both package identities, and both recursive binary/secret audits: **PASS**.
-- Isolated Gateway installation, Gateway/Worker runtime acceptance, and active rollback test: **pending**.
+- Isolated Unraid clone update to 2.1.19, Gateway and WebUI health, immutable Gateway/Worker identity, and automatic rollback to the 2.1.1 known-good image after an injected QA-only health failure: **PASS**.
 - Public binary-only release and anonymous download verification: **pending**.
 - Signed public update catalog: **pending**.
 - PROD installation: **not performed**; PROD remains 2.1.18 until the required gates pass.

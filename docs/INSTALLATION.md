@@ -1,6 +1,6 @@
 # Gateway installation and upgrades
 
-These instructions cover Meilleur Commander Gateway 2.1.19 for an x86_64 Debian/Ubuntu Linux VM or an Unraid host. The Gateway release does not include desktop client packages. The 2.1.19 candidate is not publicly installable yet: isolated update/rollback QA and signed-catalog promotion are still pending. Until the catalog and release page advertise 2.1.19, continue using the latest published release, currently 2.1.18.
+These instructions cover Meilleur Commander Gateway 2.1.19 for an x86_64 Debian/Ubuntu Linux VM or an Unraid host. The Gateway release does not include desktop client packages. The 2.1.19 candidate passed isolated Unraid clone update, health, and automatic rollback checks; its public release and signed-catalog promotion are still pending. Until the catalog and release page advertise 2.1.19, continue using the latest published release, currently 2.1.18.
 
 ## Before installation
 
