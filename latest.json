@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:6fe2f7b3850e992b77dbc91bd84dc35375599f09494fbdedd2337be83831826f",
+  "gateway_oci_digest": "sha256:edcd90bfd7c44d458f4a1f5263596d3913e85d4b5c7a74d1dbc5e294984d3399",
   "kits": {
     "linux-vm": {
-      "bytes": 909428333,
-      "sha256": "3735a2ab7053545745c2e41c4222dbd71e04de16a00908bb6a8baab67da0ce9e",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.19/meilleur-commander-linux-vm-2.1.19.tar.gz"
+      "bytes": 913156324,
+      "sha256": "6d008a50c457d9f5e0d7281e444e89b335518eef6d9dde834458bc9212dcb025",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.0/meilleur-commander-linux-vm-2.2.0.tar.gz"
     },
     "unraid": {
-      "bytes": 909439427,
-      "sha256": "bde2fde2aa530d789f550e9c41c6fec7f8256c62531d40fba3f53082425903b6",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.1.19/meilleur-commander-unraid-2.1.19.tar.gz"
+      "bytes": 913167463,
+      "sha256": "8b9c23b20752768fdc4e4a30837dcbaabfe9642bb21ef0e27a833ebc0868c93d",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.0/meilleur-commander-unraid-2.2.0.tar.gz"
     }
   },
-  "notes": "Gateway 2.1.19: adds separately signed Linux x86_64 and ARM64 GUI/headless release channels and improves Update Center verification state. Isolated Unraid clone update, health checks, and automatic rollback passed.",
-  "published_at": "2026-11-07T00:54:44Z",
+  "notes": "# Gateway 2.2.0 release information\n\n## Changes\n\nGateway 2.2.0 includes an update progress display and a compact client version selection in the Update Center. Gateway and Project Worker are distributed together in platform-specific packages. Native desktop clients have separate release channels.\n\n## Installation and update\n\nChoose the Linux VM or Unraid kit for the target host. Existing compatible installations can check the signed update catalog in the Gateway Update Center and explicitly confirm the update. Ensure adequate free space and retain the verified pre-update backup. Verify downloaded packages with `SHA256SUMS` and use only the matching platform kit.\n\n## Rollback\n\nKeep the previous known-good image and backup until the new Gateway and Project Worker are healthy. If activation fails, follow the update status and existing recovery or rollback procedure. Confirm the previous version and health before retrying.\n\n## Compatibility and security\n\nThe supported kits target x86_64 Debian/Ubuntu Linux VMs or Unraid hosts. Gateway catalog verification uses RSA-SHA256, and package identity includes SHA-256 hashes and sizes. Do not disable signature verification. Client releases remain independent of Gateway publication.\n\nThe immutable source identifier for this release is `97464797a3a1e45dd1991854967747f49c8b544c`.",
+  "published_at": "2026-11-13T13:06:26Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "d6ba42010be0cf511db9c16070cb18a9cc302ed5",
-  "source_tree": "895da6d0f3dc72906fba78ede367818c3941c446",
+  "source_sha": "97464797a3a1e45dd1991854967747f49c8b544c",
+  "source_tree": "f4717ac3c71417d528a3f654aefaf5a5ac336f46",
   "status": "published",
-  "tag": "v2.1.19",
-  "version": "2.1.19",
-  "worker_oci_digest": "sha256:7af2a2267cb221f34836df4532b77f70680c5176a55c49934ddc620246726284"
+  "tag": "v2.2.0",
+  "version": "2.2.0",
+  "worker_oci_digest": "sha256:17c8add4a6cb89823d98e7407b4bb62b08900af415a73552d458762422bf889e"
 }
