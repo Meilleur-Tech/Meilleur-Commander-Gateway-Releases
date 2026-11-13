@@ -1,10 +1,10 @@
 # Gateway troubleshooting
 
-This guide covers the Linux VM and Unraid Gateway kits, including the published 2.1.19 release. Its isolated Unraid clone update, health, and automatic rollback checks passed. Use only steps that match the platform and release actually installed.
+This guide covers the Linux VM and Unraid Gateway kits, including versions 2.1.19 and 2.2.0. Use only steps that match the platform and release actually installed.
 
 ## Release is not offered
 
-Keep the Update Center open for up to five minutes while its signed catalog refreshes. Confirm that the installed Gateway has the Update Center and that its configured channel is the intended signed channel. A version is not installable if the catalog signature, channel, package size, SHA-256, release identity, platform, or version check fails. Do not edit the catalog cache or disable signature verification. If 2.1.19 is not listed after its public release is announced, retain the displayed error and operation ID for the administrator.
+Keep the Update Center open for up to five minutes while its signed catalog refreshes. Confirm that the installed Gateway has the Update Center and that its configured channel is the intended signed channel. A version is not installable if the catalog signature, channel, package size, SHA-256, release identity, platform, or version check fails. Do not edit the catalog cache or disable signature verification. If 2.2.0 is not listed after its public release is announced, retain the displayed error and operation ID for the administrator.
 
 ## Download or checksum failure
 

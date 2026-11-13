@@ -1,6 +1,6 @@
 # Gateway security and compatibility
 
-Meilleur Commander Gateway 2.1.19 is a Linux-hosted Gateway and Project Worker release for x86_64 Debian/Ubuntu VMs and Unraid. The release passed isolated Unraid clone update, health, and automatic rollback checks. Version 2.1.19 is the latest public release on the signed beta channel. This repository distributes binary-only platform kits, not the Commander source tree or native desktop clients.
+Meilleur Commander Gateway 2.2.0 is a Linux-hosted Gateway and Project Worker release for x86_64 Debian/Ubuntu VMs and Unraid. This repository distributes binary-only platform kits, not the Commander source tree or native desktop clients.
 
 ## Release verification
 
@@ -10,7 +10,7 @@ The 2.1.19 release was built from source commit `d6ba42010be0cf511db9c16070cb18a
 
 ## Platform and client boundaries
 
-The supported Gateway kits are Linux VM and Unraid. Windows, macOS, ARM64 hosts, and Linux desktop client installation are not included in this 2.1.19 Gateway release. The Gateway source supports separate signed Linux client release channels, but no native client binaries are distributed here. Existing Linux client migration and client OTA acceptance are separate from Gateway installation and have not been proven by this candidate's package audit. Do not infer client compatibility from Gateway health alone.
+The supported Gateway kits are Linux VM and Unraid. Windows, macOS, ARM64 hosts, and Linux desktop client installation are not included in this Gateway release. The Gateway source supports separate signed Linux client release channels, but no native client binaries are distributed here. Linux client migration and updates follow their own release process. Do not infer client compatibility from Gateway health alone.
 
 The Gateway updater creates a pre-update backup and retains the previous known-good image for recovery. Updates require owner confirmation through the Update Center; there is no automatic public-channel installation. Never place secrets or customer data in this public repository or its release assets.
 
