@@ -19,6 +19,36 @@ Gateways fetch both anonymously from `https://raw.githubusercontent.com/Meilleur
 Platform kits that fail the distribution audit are withheld (2.1.0-beta.21: Unraid kit withheld; from 2.1.0-beta.21.1 both kits are published). From 2.1.0-beta.23, installed gateways accept stable releases (2.1.0, 2.1.1, …) on this same signed `beta` channel; a stable sorts after its Betas and a Beta is never offered over an installed stable. Licensing/entitlement enforcement is a later, separate extension.
 
 
+## Gateway Release-CI-Vereinfachung · Owner-Entscheidung 14.11.2026
+
+**Ab dem nächsten neu begonnenen Gateway-Release gilt ein einziger finaler
+Release-PR statt einer voll geprüften Integrations-Source-PR und
+anschließend einer zweiten voll geprüften Versions-/Doku-PR.**
+Der einzelne `release/X.Y.Z`-PR enthält bereits die final integrierten
+Produktfunktionen, `package.json` + `package-lock.json` in derselben
+Version und die Release Notes, **bevor** die finale Freeze-CI und das
+unabhängige Chris-Exact-HEAD-Review beginnen. Derselbe geprüfte SHA
+geht ohne Metadaten-Folge-Commit in den existierenden Trusted-Build.
+
+**Unverändert erforderlich:** die vollständige Candidate-CI, Guard,
+Provenance, Chris auf dem exakten HEAD, Main-Integrationsnachweis,
+gültiger QA-Installations-/Recovery-/Rollback-Nachweis, vorhandener
+isolierter Owner-Signer, unveränderliche Binär-Assets und atomar
+signierter Public Latest. Main-CI kann weiterhin eigene Prüfungen
+haben und die Signatur bleibt technisch vom CI-Runner getrennt.
+Keine weitere Owner-Public-GO-Schleife; PROD nur durch den
+Update-Center-Knopf des Eigentümers.
+
+**Keine rückwirkende Pipeline-Mutation:** Gateway 2.2.2 hat bereits
+einen laufenden Source-Merge und den separaten
+[Release-PR #1819](https://github.com/Meilleur-Tech/Meilleur-Commander/pull/1819).
+Dessen Checks, Review und Trusted-Publisher werden nicht abgebrochen
+oder durch eine neue Kurzprüfung ersetzt. Eine spätere
+Metadaten-only-Quell-CI-Wiederverwendung ist ein separates technisches
+Performancevorhaben und erfordert exakte Source-/Review-/CI-
+Attestierungen samt streng geprüftem Änderungsumfang;
+sie ist derzeit **nicht implementiert**.
+
 ## OWNER Release-Fast-Path v1.2 · 14.11.2026 · gilt ab Gateway 2.2.2
 
 **Die zusätzliche menschliche Public-Release-Freigabe zwischen bestandenem
