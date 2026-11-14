@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:edcd90bfd7c44d458f4a1f5263596d3913e85d4b5c7a74d1dbc5e294984d3399",
+  "gateway_oci_digest": "sha256:30722f291acb3d6554af36acf68f3e299d5026352353e19f6c62426d3d49f11f",
   "kits": {
     "linux-vm": {
-      "bytes": 913156324,
-      "sha256": "6d008a50c457d9f5e0d7281e444e89b335518eef6d9dde834458bc9212dcb025",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.0/meilleur-commander-linux-vm-2.2.0.tar.gz"
+      "bytes": 914271040,
+      "sha256": "731fa17cbb2721078bc6175181ae85464945b155f38978e609f80606d88fb792",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.1/meilleur-commander-linux-vm-2.2.1.tar.gz"
     },
     "unraid": {
-      "bytes": 913167463,
-      "sha256": "8b9c23b20752768fdc4e4a30837dcbaabfe9642bb21ef0e27a833ebc0868c93d",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.0/meilleur-commander-unraid-2.2.0.tar.gz"
+      "bytes": 914282461,
+      "sha256": "4acb935b759513dc8518357dbe9ef3a69c30d4378fe3538409f23200a5698976",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.1/meilleur-commander-unraid-2.2.1.tar.gz"
     }
   },
-  "notes": "# Gateway 2.2.0 release information\n\n## Changes\n\nGateway 2.2.0 includes an update progress display and a compact client version selection in the Update Center. Gateway and Project Worker are distributed together in platform-specific packages. Native desktop clients have separate release channels.\n\n## Installation and update\n\nChoose the Linux VM or Unraid kit for the target host. Existing compatible installations can check the signed update catalog in the Gateway Update Center and explicitly confirm the update. Ensure adequate free space and retain the verified pre-update backup. Verify downloaded packages with `SHA256SUMS` and use only the matching platform kit.\n\n## Rollback\n\nKeep the previous known-good image and backup until the new Gateway and Project Worker are healthy. If activation fails, follow the update status and existing recovery or rollback procedure. Confirm the previous version and health before retrying.\n\n## Compatibility and security\n\nThe supported kits target x86_64 Debian/Ubuntu Linux VMs or Unraid hosts. Gateway catalog verification uses RSA-SHA256, and package identity includes SHA-256 hashes and sizes. Do not disable signature verification. Client releases remain independent of Gateway publication.\n\nThe immutable source identifier for this release is `97464797a3a1e45dd1991854967747f49c8b544c`.",
-  "published_at": "2026-11-13T13:06:26Z",
+  "notes": "# Gateway 2.2.1 release information\n\n## Changes\n\nGateway 2.2.1 adds an optional client for registered MCP servers. It remains disabled by default; enabling and operating that feature has not been accepted for this release. Existing Gateway and Project Worker functions remain available with the feature disabled. Desktop clients retain their own independent release channels.\n\n## Installation and update\n\nUse the Linux VM or Unraid package matching your host. Existing installations can check the signed catalog in Update Center and explicitly confirm an update. Check free space, retain a verified backup, and verify the official SHA-256 checksums.\n\n## Rollback\n\nKeep the previous known-good Gateway image and backup until Gateway and Project Worker health are confirmed. If activation fails, follow the reported recovery status and verify the restored version before retrying.\n\n## Compatibility and security\n\nThe packages support x86_64 Debian/Ubuntu Linux VMs and Unraid hosts. Catalog signatures use RSA-SHA256 and bind package hashes and image identities; signature verification must remain enabled. The source identity for this release is `00c1d1a0beb38c6878fa42c85c9f65a6e4de41ff`.",
+  "published_at": "2026-11-14T11:20:54Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "97464797a3a1e45dd1991854967747f49c8b544c",
-  "source_tree": "f4717ac3c71417d528a3f654aefaf5a5ac336f46",
+  "source_sha": "00c1d1a0beb38c6878fa42c85c9f65a6e4de41ff",
+  "source_tree": "27c0416ecb55b4963bae150663140be8c9354808",
   "status": "published",
-  "tag": "v2.2.0",
-  "version": "2.2.0",
-  "worker_oci_digest": "sha256:17c8add4a6cb89823d98e7407b4bb62b08900af415a73552d458762422bf889e"
+  "tag": "v2.2.1",
+  "version": "2.2.1",
+  "worker_oci_digest": "sha256:413a8317f5e3de543d0d1a9de4efecdcf1e180a91cc47b26006688d0526fd192"
 }
