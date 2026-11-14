@@ -18,3 +18,14 @@ The Gateway updater creates a pre-update backup and retains the previous known-g
 ## Gateway 2.2.1
 
 These instructions also apply to Gateway 2.2.1 on supported Linux VM and Unraid hosts. The optional MCP client remains disabled by default; leave the existing signature and backup checks enabled.
+
+## Gateway 2.2.2 security and compatibility
+
+Gateway 2.2.2 is an x86_64 Linux VM and Unraid Gateway + Project Worker
+package. The optional NOC & Control upstream OAuth integration requires
+separate owner activation, explicit consent, PKCE S256 and suitable scope.
+It remains OFF by default and does not grant Control access by installation.
+Frozen binary-only Gateway kits retain explicit original SHA-256 and OCI
+identities, while the update manifest requires the existing RSA-SHA256
+signed catalog with its pinned public key. Installed QA recovery and PROD
+acceptance must be proven separately from successful source/audit tests.

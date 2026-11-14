@@ -22,3 +22,13 @@ Record the Gateway version, platform, operation ID, and sanitized error text. Ex
 ## Gateway 2.2.1
 
 These instructions also apply to Gateway 2.2.1 on supported Linux VM and Unraid hosts. The optional MCP client remains disabled by default; leave the existing signature and backup checks enabled.
+
+## Gateway 2.2.2 troubleshooting
+
+If Gateway 2.2.2 is publicly announced but the signed Update Center still
+shows version 2.2.1, allow the normal catalog refresh and inspect the
+actual channel, signature-validation and transport error before retrying.
+Never edit channel data, disable signatures or manually overwrite the
+running Docker image. An optional NOC OAuth Login button being unavailable
+can mean the Control MCP issuer or inventory scope is not yet ready.
+Retain the pre-update backup and the prior known-good recovery image.

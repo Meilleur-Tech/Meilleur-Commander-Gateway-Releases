@@ -16,6 +16,17 @@ Gateway **2.2.1** is the current signed public release for Linux VM and Unraid. 
 - [2.2.0 SHA-256 inventory](docs/SHA256SUMS-2.2.0.txt)
 - [2.1.19 SHA-256 inventory](docs/SHA256SUMS-2.1.19.txt)
 
+## Gateway 2.2.2 publication preparation
+
+Gateway 2.2.2 is prepared but not yet a public installation offering. The
+original binary packages have passed their trusted build and public binary
+security audits. **Public Latest still offers 2.2.1** until the signed
+version 2.2.2 release and catalog are officially published and verified.
+
+- [Gateway 2.2.2 release notes (advance)](docs/RELEASE-NOTES-2.2.2.md)
+- [Gateway 2.2.2 kit SHA-256 inventory](docs/SHA256SUMS-2.2.2.txt)
+- [Installation, upgrade and rollback](docs/INSTALLATION.md)
+
 ## Supported Gateway packages
 
 The Gateway release provides two separate platform kits: Linux VM (`linux-vm`, x86_64 Debian/Ubuntu hosts with Docker) and Unraid (`unraid`). The kits contain Gateway and Project Worker OCI images built from the same reviewed source. There are no Windows, macOS, or Linux desktop client packages in these Gateway releases. Native client installers and their own release channels are separate products and approvals.

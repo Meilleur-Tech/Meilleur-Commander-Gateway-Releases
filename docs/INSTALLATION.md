@@ -32,3 +32,13 @@ Use the Gateway Backup Center or the recovery plane's documented rollback proced
 ## Gateway 2.2.1
 
 These instructions also apply to Gateway 2.2.1 on supported Linux VM and Unraid hosts. The optional MCP client remains disabled by default; leave the existing signature and backup checks enabled.
+
+## Gateway 2.2.2 publication preparation
+
+Gateway 2.2.2 supports the matching x86_64 Unraid or Debian/Ubuntu Linux VM
+kit. Only use the official signed beta channel after it actually offers
+version 2.2.2, not merely after this documentation appears. A direct update
+from Gateway 2.2.0 to 2.2.2 is intended without installing 2.2.1 first.
+Verify signature, package SHA-256 and OCI identity, free disk space, pre-update
+backup, installed health, and the recovery plane rollback state. The owner
+must explicitly press the Update Center Install button for PROD.
