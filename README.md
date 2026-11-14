@@ -4,13 +4,15 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.0** release information covers the signed Linux VM and Unraid kits. Use the signed update catalog and verify downloads before installation.
+Gateway **2.2.1** is the current signed public release for Linux VM and Unraid. Its optional upstream MCP client is disabled by default. Use the signed update catalog and verify downloads before installation.
 
+- [2.2.1 release notes](docs/RELEASE-NOTES-2.2.1.md)
 - [2.2.0 release notes](docs/RELEASE-NOTES-2.2.0.md)
 - [2.1.19 release notes](docs/RELEASE-NOTES-2.1.19.md)
 - [Installation and upgrade instructions](docs/INSTALLATION.md)
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
+- [2.2.1 SHA-256 inventory](docs/SHA256SUMS-2.2.1.txt)
 - [2.2.0 SHA-256 inventory](docs/SHA256SUMS-2.2.0.txt)
 - [2.1.19 SHA-256 inventory](docs/SHA256SUMS-2.1.19.txt)
 
@@ -22,7 +24,6 @@ When a release is public, download its immutable assets from the matching GitHub
 
 ## Gateway 2.2.1
 
-Release information and downloads for Gateway 2.2.1 are available after publication. The optional MCP client remains disabled by default.
+[Gateway 2.2.1 is publicly published, immutable, and signed](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.1). The optional MCP client remains disabled by default. The beta update catalog is at [latest.json](latest.json), with signature [latest.json.sig](latest.json.sig).
 
-- [2.2.1 release notes](docs/RELEASE-NOTES-2.2.1.md)
-- [2.2.1 SHA-256 inventory](docs/SHA256SUMS-2.2.1.txt)
+- [Binding owner release contract](CHANNEL.md)
