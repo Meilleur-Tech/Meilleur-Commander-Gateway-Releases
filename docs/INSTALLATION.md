@@ -28,3 +28,7 @@ Installations without the Gateway Update Center need the platform-specific one-t
 
 Use the Gateway Backup Center or the recovery plane's documented rollback procedure. Verify the previous release's health and identity after rollback. Preserve the pre-update backup and previous image until recovery is confirmed. If the Update Center reports an unknown operation outcome, inspect its recorded operation status before retrying; do not start a second update operation blindly.
 
+
+## Gateway 2.2.1
+
+These instructions also apply to Gateway 2.2.1 on supported Linux VM and Unraid hosts. The optional MCP client remains disabled by default; leave the existing signature and backup checks enabled.

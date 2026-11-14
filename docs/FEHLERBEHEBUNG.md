@@ -18,3 +18,7 @@ Read the Update Center operation status and host recovery-plane status. The upda
 
 Record the Gateway version, platform, operation ID, and sanitized error text. Exclude credentials, `.env` contents, access tokens, private keys, and full logs from public reports. Contact the administrator with that limited evidence.
 
+
+## Gateway 2.2.1
+
+These instructions also apply to Gateway 2.2.1 on supported Linux VM and Unraid hosts. The optional MCP client remains disabled by default; leave the existing signature and backup checks enabled.

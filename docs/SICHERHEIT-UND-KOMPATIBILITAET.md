@@ -14,3 +14,7 @@ The supported Gateway kits are Linux VM and Unraid. Windows, macOS, ARM64 hosts,
 
 The Gateway updater creates a pre-update backup and retains the previous known-good image for recovery. Updates require owner confirmation through the Update Center; there is no automatic public-channel installation. Never place secrets or customer data in this public repository or its release assets.
 
+
+## Gateway 2.2.1
+
+These instructions also apply to Gateway 2.2.1 on supported Linux VM and Unraid hosts. The optional MCP client remains disabled by default; leave the existing signature and backup checks enabled.
