@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:30722f291acb3d6554af36acf68f3e299d5026352353e19f6c62426d3d49f11f",
+  "gateway_oci_digest": "sha256:caffc7b043b2780b329568f5a9da698e4e759d042b3c7603f28648f519dc9dd5",
   "kits": {
     "linux-vm": {
-      "bytes": 914271040,
-      "sha256": "731fa17cbb2721078bc6175181ae85464945b155f38978e609f80606d88fb792",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.1/meilleur-commander-linux-vm-2.2.1.tar.gz"
+      "bytes": 914991808,
+      "sha256": "d45ceb8dd036f23855ab5092d10761e7424c38f8b453d494aa605f29e39e80ce",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.2/meilleur-commander-linux-vm-2.2.2.tar.gz"
     },
     "unraid": {
-      "bytes": 914282461,
-      "sha256": "4acb935b759513dc8518357dbe9ef3a69c30d4378fe3538409f23200a5698976",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.1/meilleur-commander-unraid-2.2.1.tar.gz"
+      "bytes": 915003503,
+      "sha256": "24b7419eec021f1953c42bc6ffe99347ba004b28888775772975c3c533a7f619",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.2/meilleur-commander-unraid-2.2.2.tar.gz"
     }
   },
-  "notes": "# Gateway 2.2.1 release information\n\n## Changes\n\nGateway 2.2.1 adds an optional client for registered MCP servers. It remains disabled by default; enabling and operating that feature has not been accepted for this release. Existing Gateway and Project Worker functions remain available with the feature disabled. Desktop clients retain their own independent release channels.\n\n## Installation and update\n\nUse the Linux VM or Unraid package matching your host. Existing installations can check the signed catalog in Update Center and explicitly confirm an update. Check free space, retain a verified backup, and verify the official SHA-256 checksums.\n\n## Rollback\n\nKeep the previous known-good Gateway image and backup until Gateway and Project Worker health are confirmed. If activation fails, follow the reported recovery status and verify the restored version before retrying.\n\n## Compatibility and security\n\nThe packages support x86_64 Debian/Ubuntu Linux VMs and Unraid hosts. Catalog signatures use RSA-SHA256 and bind package hashes and image identities; signature verification must remain enabled. The source identity for this release is `00c1d1a0beb38c6878fa42c85c9f65a6e4de41ff`.",
-  "published_at": "2026-11-14T11:20:54Z",
+  "notes": "# Gateway 2.2.2 release information\n\n## Changes and improvements\n\nFabric Commander Gateway 2.2.2 adds an MCP integrations view in the private\nGateway WebUI. It distinguishes incoming MCP clients from optional upstream\nMCP servers and reports observed readiness without claiming that a stored\nserver registration is connected.\n\nThe optional NOC & Control upstream client supports OAuth 2.1 authorization\ncode with PKCE S256, explicit browser consent, token refresh and safe\nrepeatable revocation. Login is offered only when the Control server actually\nadvertises the necessary inventory:read scope, and pending token revocation\nprevents a new Login. The MCP integration remains disabled by default.\n\n## Installation and update\n\nChoose the matching Unraid or Linux-VM 2.2.2 package for your host. Only after\nthe immutable signed public release and beta catalog promotion, the Gateway\nUpdate Center should offer a direct update from installed 2.2.0 to 2.2.2.\nA 2.2.1 intermediate installation is not intended. Keep a verified pre-update\nbackup, confirm sufficient space, and install only via the official signed\nupdate channel after inspecting the target version. PROD installation is an\nexplicit owner action, never part of public publication.\n\n## Rollback and recovery\n\nRetain the previous known-good 2.2.0 image and verified backup until the\ninstalled Gateway and Project Worker report healthy, matching identities\nand completed update status. The existing recovery plane implements rollback\nif the candidate fails to activate. Do not force-install images via\nunverified Docker commands when normal recovery reports a problem.\n\n## Compatibility and security\n\nThe Gateway 2.2.2 packages target x86_64 Debian/Ubuntu Linux virtual machines\nand Unraid hosts. Native Windows/macOS/Linux desktop clients are independent.\nExact product source:\n39a42e9a813e108e20d2c67aa1315c6c14b31ab5.\nGateway OCI:\nsha256:caffc7b043b2780b329568f5a9da698e4e759d042b3c7603f28648f519dc9dd5.\nProject Worker OCI:\nsha256:64ec9b62dd1377746d9f14e5aea5178749ad0e4f6274a79e9e3f7331fc3cc4e4.\nBoth platform kits originate from the same trusted build and have passed\nrecursive public binary/secret auditing. The official manifest, SHA-256\ninventory and RSA-SHA256-signed latest catalog bind the customer package\nidentity. Signature checks must never be disabled.\n\n## Known limits and publication status\n\nThese are advance customer-facing notes. The availability of this document\ndoes **not** imply 2.2.2 is published or installed. Until a verified signed\ncatalog is promoted, the current Public Latest remains 2.2.1. Live NOC OAuth\ncallback/consent, independent Control MCP enablement, Site/AP calls, negative\ntenant ACL tests and installed QA rollback require separate real acceptance;\nsynthetic source tests do not establish that field status.",
+  "published_at": "2026-11-15T02:26:16Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "00c1d1a0beb38c6878fa42c85c9f65a6e4de41ff",
-  "source_tree": "27c0416ecb55b4963bae150663140be8c9354808",
+  "source_sha": "39a42e9a813e108e20d2c67aa1315c6c14b31ab5",
+  "source_tree": "5862b32e506e1a9328118c14f80941bb257bb5bd",
   "status": "published",
-  "tag": "v2.2.1",
-  "version": "2.2.1",
-  "worker_oci_digest": "sha256:413a8317f5e3de543d0d1a9de4efecdcf1e180a91cc47b26006688d0526fd192"
+  "tag": "v2.2.2",
+  "version": "2.2.2",
+  "worker_oci_digest": "sha256:64ec9b62dd1377746d9f14e5aea5178749ad0e4f6274a79e9e3f7331fc3cc4e4"
 }
