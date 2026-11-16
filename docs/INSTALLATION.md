@@ -42,3 +42,8 @@ from Gateway 2.2.0 to 2.2.2 is intended without installing 2.2.1 first.
 Verify signature, package SHA-256 and OCI identity, free disk space, pre-update
 backup, installed health, and the recovery plane rollback state. The owner
 must explicitly press the Update Center Install button for PROD.
+
+
+## Gateway 2.2.4
+
+Gateway 2.2.4 for x86_64 Unraid and Linux VM must be installed from the verified signed Public Beta Update Center only. Confirm the previous healthy release, current pre-update backup, exact package SHA-256, and recovery-plane rollback before updating.

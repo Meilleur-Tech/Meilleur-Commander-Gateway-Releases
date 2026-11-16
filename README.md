@@ -4,17 +4,14 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.1** is the current signed public release for Linux VM and Unraid. Its optional upstream MCP client is disabled by default. Use the signed update catalog and verify downloads before installation.
+Gateway **2.2.2** remains the signed Public Latest while the complete 2.2.4 release is verified and published. Gateway **2.2.4** is the next reviewed release candidate, not yet an installation offering. Once its immutable release and signed beta catalog are independently verified, update through the normal Gateway Update Center.
 
-- [2.2.1 release notes](docs/RELEASE-NOTES-2.2.1.md)
-- [2.2.0 release notes](docs/RELEASE-NOTES-2.2.0.md)
-- [2.1.19 release notes](docs/RELEASE-NOTES-2.1.19.md)
+- [2.2.4 release notes](docs/RELEASE-NOTES-2.2.4.md)
+- [2.2.4 SHA-256 inventory](docs/SHA256SUMS-2.2.4.txt)
+- [2.2.2 release notes](docs/RELEASE-NOTES-2.2.2.md)
 - [Installation and upgrade instructions](docs/INSTALLATION.md)
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
-- [2.2.1 SHA-256 inventory](docs/SHA256SUMS-2.2.1.txt)
-- [2.2.0 SHA-256 inventory](docs/SHA256SUMS-2.2.0.txt)
-- [2.1.19 SHA-256 inventory](docs/SHA256SUMS-2.1.19.txt)
 
 ## Gateway 2.2.2 publication preparation
 

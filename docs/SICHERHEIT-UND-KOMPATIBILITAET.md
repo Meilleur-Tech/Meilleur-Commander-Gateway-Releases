@@ -29,3 +29,8 @@ Frozen binary-only Gateway kits retain explicit original SHA-256 and OCI
 identities, while the update manifest requires the existing RSA-SHA256
 signed catalog with its pinned public key. Installed QA recovery and PROD
 acceptance must be proven separately from successful source/audit tests.
+
+
+## Gateway 2.2.4
+
+Gateway 2.2.4 is for x86_64 Unraid and supported Linux VM hosts. The signed catalog is RSA-SHA256 verified with the existing pinned Gateway key. New MCP providers, OAuth scopes and approved tool schemas remain opt-in, with provider permissions and identity checks enforced separately.

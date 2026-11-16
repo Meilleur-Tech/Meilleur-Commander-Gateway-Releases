@@ -32,3 +32,8 @@ Never edit channel data, disable signatures or manually overwrite the
 running Docker image. An optional NOC OAuth Login button being unavailable
 can mean the Control MCP issuer or inventory scope is not yet ready.
 Retain the pre-update backup and the prior known-good recovery image.
+
+
+## Gateway 2.2.4
+
+For Gateway 2.2.4, an unavailable or mismatched release signature, unknown SHA-256, expired catalog, missing Project Worker or failed MCP/Web health check is a HOLD. Keep the previous known-good version and use official recovery instead of overriding integrity checks.
