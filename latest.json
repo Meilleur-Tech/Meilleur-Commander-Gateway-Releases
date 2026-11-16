@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:caffc7b043b2780b329568f5a9da698e4e759d042b3c7603f28648f519dc9dd5",
+  "gateway_oci_digest": "sha256:3277ee59566c2630500ffcdd5f876c33fab61fa5b600c8540ccc4a8d9fcce884",
   "kits": {
     "linux-vm": {
-      "bytes": 914991808,
-      "sha256": "d45ceb8dd036f23855ab5092d10761e7424c38f8b453d494aa605f29e39e80ce",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.2/meilleur-commander-linux-vm-2.2.2.tar.gz"
+      "bytes": 919120474,
+      "sha256": "1eef11e7595c6c2af31b77dc351eb825224567465b91cf26371e34308a1647dc",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.4/meilleur-commander-linux-vm-2.2.4.tar.gz"
     },
     "unraid": {
-      "bytes": 915003503,
-      "sha256": "24b7419eec021f1953c42bc6ffe99347ba004b28888775772975c3c533a7f619",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.2/meilleur-commander-unraid-2.2.2.tar.gz"
+      "bytes": 919131401,
+      "sha256": "157080a3224687966e249b7b96647eecc44dba3ddf13e9b68a1de62e9119ad21",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.4/meilleur-commander-unraid-2.2.4.tar.gz"
     }
   },
-  "notes": "# Gateway 2.2.2 release information\n\n## Changes and improvements\n\nFabric Commander Gateway 2.2.2 adds an MCP integrations view in the private\nGateway WebUI. It distinguishes incoming MCP clients from optional upstream\nMCP servers and reports observed readiness without claiming that a stored\nserver registration is connected.\n\nThe optional NOC & Control upstream client supports OAuth 2.1 authorization\ncode with PKCE S256, explicit browser consent, token refresh and safe\nrepeatable revocation. Login is offered only when the Control server actually\nadvertises the necessary inventory:read scope, and pending token revocation\nprevents a new Login. The MCP integration remains disabled by default.\n\n## Installation and update\n\nChoose the matching Unraid or Linux-VM 2.2.2 package for your host. Only after\nthe immutable signed public release and beta catalog promotion, the Gateway\nUpdate Center should offer a direct update from installed 2.2.0 to 2.2.2.\nA 2.2.1 intermediate installation is not intended. Keep a verified pre-update\nbackup, confirm sufficient space, and install only via the official signed\nupdate channel after inspecting the target version. PROD installation is an\nexplicit owner action, never part of public publication.\n\n## Rollback and recovery\n\nRetain the previous known-good 2.2.0 image and verified backup until the\ninstalled Gateway and Project Worker report healthy, matching identities\nand completed update status. The existing recovery plane implements rollback\nif the candidate fails to activate. Do not force-install images via\nunverified Docker commands when normal recovery reports a problem.\n\n## Compatibility and security\n\nThe Gateway 2.2.2 packages target x86_64 Debian/Ubuntu Linux virtual machines\nand Unraid hosts. Native Windows/macOS/Linux desktop clients are independent.\nExact product source:\n39a42e9a813e108e20d2c67aa1315c6c14b31ab5.\nGateway OCI:\nsha256:caffc7b043b2780b329568f5a9da698e4e759d042b3c7603f28648f519dc9dd5.\nProject Worker OCI:\nsha256:64ec9b62dd1377746d9f14e5aea5178749ad0e4f6274a79e9e3f7331fc3cc4e4.\nBoth platform kits originate from the same trusted build and have passed\nrecursive public binary/secret auditing. The official manifest, SHA-256\ninventory and RSA-SHA256-signed latest catalog bind the customer package\nidentity. Signature checks must never be disabled.\n\n## Known limits and publication status\n\nThese are advance customer-facing notes. The availability of this document\ndoes **not** imply 2.2.2 is published or installed. Until a verified signed\ncatalog is promoted, the current Public Latest remains 2.2.1. Live NOC OAuth\ncallback/consent, independent Control MCP enablement, Site/AP calls, negative\ntenant ACL tests and installed QA rollback require separate real acceptance;\nsynthetic source tests do not establish that field status.",
-  "published_at": "2026-11-15T02:26:16Z",
+  "notes": "# Fabric Commander Gateway 2.2.4\nVersion 2.2.4 extends the Gateway MCP client to interoperate with modern MCP protocol 2026-07-28 and legacy 2025-11-25 servers. The upstream MCP SDK stack uses FastMCP 4.2.0, MCP Python SDK 2.3.0 and httpx2. Generic upstream MCP server connections can be registered in the Gateway operator interface, with separate tool/schema approval and least-privilege authorization.\n\nImportant security behavior: tool input and declared output schemas are pinned and validated; changes cause an approval hold. Unknown or unsuccessful remote tool outcomes are not automatically retried. OAuth 2.1 with PKCE can be configured for supported providers, including explicit browser consent and per-provider token isolation. Generic provider login may require the provider to pre-register the client ID and callback address; discovery alone does not mean authenticated or authorized.\n\nRuntime correction: the final 2.2.4 package explicitly includes httpx==0.28.1 and verifies runtime imports in its trusted container build. The earlier unpublished 2.2.4 candidate failed isolated QA startup and was withdrawn before any public or production deployment. This replacement retains version 2.2.4 and uses the newly reviewed source.\n\nCompatibility: official Unraid and Linux x86_64 VM kits contain the same frozen Gateway and Project Worker OCI images. Native Windows, macOS and Linux clients are distributed independently. New MCP integrations remain opt-in; installing 2.2.4 does not automatically authorize NOC, Home Assistant, Lexit or other upstream servers.\n\nInstallation: only use the matching immutable published package and signed beta update catalog. Verify exact SHA-256, pinned RSA-SHA256 signature, Gateway/Worker identity and readiness before applying the update. Keep a verified pre-update backup and previous known-good version. Use the normal Gateway Update Center and recovery-plane rollback rather than forced Docker replacement. Control beta.60 live OAuth/browser consent and ChatGPT end-to-end tools are separate acceptance tasks, not guaranteed by installing this Gateway release.\n\nFrozen reviewed product source: b4d7865066603ab4ed153d166bcf53356e7efe44.",
+  "published_at": "2026-11-16T08:40:00Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "39a42e9a813e108e20d2c67aa1315c6c14b31ab5",
-  "source_tree": "5862b32e506e1a9328118c14f80941bb257bb5bd",
+  "source_sha": "b4d7865066603ab4ed153d166bcf53356e7efe44",
+  "source_tree": "83dda48ec2a2babef261704f1703d3eb07dff821",
   "status": "published",
-  "tag": "v2.2.2",
-  "version": "2.2.2",
-  "worker_oci_digest": "sha256:64ec9b62dd1377746d9f14e5aea5178749ad0e4f6274a79e9e3f7331fc3cc4e4"
+  "tag": "v2.2.4",
+  "version": "2.2.4",
+  "worker_oci_digest": "sha256:f65f1d0b90f4c5ab7acba22d1262de024831c6eadeca5d8c498897caa12950b7"
 }
