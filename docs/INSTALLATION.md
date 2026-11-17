@@ -1,10 +1,10 @@
 # Gateway installation and upgrades
 
-These instructions cover Meilleur Commander Gateway 2.2.0 for an x86_64 Debian/Ubuntu Linux VM or an Unraid host. The Gateway release does not include desktop client packages.
+These instructions cover Fabric Commander Gateway 2.2.6 for an x86_64 Debian/Ubuntu Linux VM or an Unraid host (with earlier 2.2.x behaviour retained where compatible). The Gateway release does not include desktop client packages.
 
 ## Before installation
 
-Use the kit for the actual host: `meilleur-commander-linux-vm-2.2.0.tar.gz` for the supported Linux VM platform or `meilleur-commander-unraid-2.2.0.tar.gz` for Unraid. Require x86_64, a supported Debian/Ubuntu or Unraid host, Docker access, and sufficient free space for the new images plus the pre-update backup. Do not use a kit for another platform.
+Use the kit for the actual host: `meilleur-commander-linux-vm-2.2.6.tar.gz` for the supported Linux VM platform or `meilleur-commander-unraid-2.2.6.tar.gz` for Unraid. Require x86_64, a supported Debian/Ubuntu or Unraid host, Docker access, and sufficient free space for the new images plus the pre-update backup. Do not use a kit for another platform.
 
 After publication, download the release assets and verify them from the same directory before installation:
 
@@ -51,3 +51,7 @@ Gateway 2.2.4 for x86_64 Unraid and Linux VM must be installed from the verified
 ## Gateway 2.2.5 installation and update
 
 For Gateway 2.2.5, use the supported x86_64 Debian/Ubuntu Linux VM or Unraid kit. Verify the RSA-SHA256 signature of the beta channel and matching SHA-256 kit, keep a working backup and confirm installation using the normal Gateway Update Center. The optional universal MCP connection is OFF by default and needs explicit administrator consent. PROD is never installed merely because the public release has appeared.
+
+## Gateway 2.2.6 OAuth consent
+
+After installing Gateway 2.2.6, the optional upstream MCP Wizard discovers the permissions genuinely advertised by the provider. Select `monitor:read` only when needed and complete the new provider OAuth consent. Existing `inventory:read` tokens do not silently gain monitoring access. The normal signed Update Center is the recommended installation path, and customer PROD activation is always explicit.

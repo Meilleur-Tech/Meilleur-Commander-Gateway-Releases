@@ -2,6 +2,13 @@
 
 This repository distributes binary-only Gateway and Project Worker releases for Linux hosts and Unraid. The packages include the self-hosted Gateway WebUI and its host recovery-plane helpers. They contain no source repository, credentials, customer data, or native desktop client installers.
 
+## Gateway 2.2.6 release candidate documentation
+
+The frozen and successfully tested Gateway **2.2.6** candidate is prepared for the signed beta channel. This documentation is published ahead of the immutable release and does not indicate that 2.2.6 is already installed on any customer's PROD host. For live update availability rely on the RSA-SHA256 signed `latest.json` catalog.
+
+- [Gateway 2.2.6 release notes](docs/RELEASE-NOTES-2.2.6.md)
+- [Gateway 2.2.6 SHA-256 kit inventory](docs/SHA256SUMS-2.2.6.txt)
+
 ## Current release
 
 Gateway **2.2.5** is the current signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. The immutable Gateway and Project Worker images passed package verification, isolated QA install, health, recovery to the previous version and re-installation. The public update is offered through the signed Gateway Update Center; installation on PROD remains a separate, explicit owner action.

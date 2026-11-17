@@ -1,10 +1,10 @@
 # Gateway troubleshooting
 
-This guide covers the Linux VM and Unraid Gateway kits, including versions 2.1.19 and 2.2.0. Use only steps that match the platform and release actually installed.
+This guide covers the Linux VM and Unraid Gateway kits, including Gateway 2.2.6 and earlier supported releases. Use only steps that match the platform and release actually installed.
 
 ## Release is not offered
 
-Keep the Update Center open for up to five minutes while its signed catalog refreshes. Confirm that the installed Gateway has the Update Center and that its configured channel is the intended signed channel. A version is not installable if the catalog signature, channel, package size, SHA-256, release identity, platform, or version check fails. Do not edit the catalog cache or disable signature verification. If 2.2.0 is not listed after its public release is announced, retain the displayed error and operation ID for the administrator.
+Keep the Update Center open for up to five minutes while its signed catalog refreshes. Confirm that the installed Gateway has the Update Center and that its configured channel is the intended signed channel. A version is not installable if the catalog signature, channel, package size, SHA-256, release identity, platform, or version check fails. Do not edit the catalog cache or disable signature verification. If 2.2.6 is not listed after its public release is announced, retain the displayed error and operation ID for the administrator.
 
 ## Download or checksum failure
 
@@ -41,3 +41,7 @@ For Gateway 2.2.4, an unavailable or mismatched release signature, unknown SHA-2
 ## Gateway 2.2.5 troubleshooting
 
 If 2.2.5 is not offered, verify the public signed catalog, installation identity and status refresh before retrying. The cached previous check is not the running version. On installation or health failure, inspect the recovery operation identifier and verify rollback to the known-good image. Do not bypass the catalog signature, SHA-256 integrity check or retry an operation whose outcome is unknown.
+
+## Gateway 2.2.6 MCP monitoring authorization
+
+If `find_clients`, `get_client_details` or `get_ap_link_diagnostics` is not authorized, inspect the actual provider-granted token scopes, active connection state, live discovered tool schemas and permitted site/building ACL. For `monitor:read`, reconnect with explicit browser OAuth/PKCE consent; never edit token scopes or manually create a tool. Missing collection coverage and stale device samples are not proof of an RF fault. The independent native client release channel is unaffected.

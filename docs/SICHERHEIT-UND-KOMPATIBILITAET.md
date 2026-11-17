@@ -1,6 +1,6 @@
 # Gateway security and compatibility
 
-Meilleur Commander Gateway 2.2.0 is a Linux-hosted Gateway and Project Worker release for x86_64 Debian/Ubuntu VMs and Unraid. This repository distributes binary-only platform kits, not the Commander source tree or native desktop clients.
+Fabric Commander Gateway 2.2.6 is a Linux-hosted Gateway and Project Worker release for x86_64 Debian/Ubuntu VMs and Unraid. This repository distributes binary-only platform kits, not the Commander source tree or native desktop clients.
 
 ## Release verification
 
@@ -38,3 +38,7 @@ Gateway 2.2.4 is for x86_64 Unraid and supported Linux VM hosts. The signed cata
 ## Gateway 2.2.5 security and compatibility
 
 Gateway 2.2.5 supports x86_64 Debian/Ubuntu Linux VM and Unraid installation kits, with the Gateway and Project Worker tied to one source SHA. Pinned RSA-SHA256 catalog signatures and source/package SHA-256 integrity remain mandatory. The optional universal MCP client uses explicit owner consent, TLS hostname checks and authorized IP pinning against DNS rebinding. Native desktop clients are not part of this public Gateway release.
+
+## Gateway 2.2.6 authorization and binary identity
+
+The optional provider-neutral MCP integration uses explicit human consent and OAuth PKCE S256. Permissions derive from verified provider/resource discovery, but activation requires an actual token grant, current provider tool list and the site's own access control. `inventory:read` alone must not authorize monitoring; monitoring tools are read-only and existing safeguards reject mutating scopes and untrusted schemas. The release preserves the registered RSA-SHA256 public update signature and SHA-256 digests, without introducing a new signing identity or any dependency on native client upgrades. Publishing a release never installs it on PROD automatically.
