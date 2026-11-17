@@ -37,3 +37,7 @@ Retain the pre-update backup and the prior known-good recovery image.
 ## Gateway 2.2.4
 
 For Gateway 2.2.4, an unavailable or mismatched release signature, unknown SHA-256, expired catalog, missing Project Worker or failed MCP/Web health check is a HOLD. Keep the previous known-good version and use official recovery instead of overriding integrity checks.
+
+## Gateway 2.2.5 troubleshooting
+
+If 2.2.5 is not offered, verify the public signed catalog, installation identity and status refresh before retrying. The cached previous check is not the running version. On installation or health failure, inspect the recovery operation identifier and verify rollback to the known-good image. Do not bypass the catalog signature, SHA-256 integrity check or retry an operation whose outcome is unknown.

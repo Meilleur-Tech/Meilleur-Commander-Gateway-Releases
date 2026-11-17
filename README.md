@@ -4,25 +4,13 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.2** remains the signed Public Latest while the complete 2.2.4 release is verified and published. Gateway **2.2.4** is the next reviewed release candidate, not yet an installation offering. Once its immutable release and signed beta catalog are independently verified, update through the normal Gateway Update Center.
+Gateway **2.2.5** is the next reviewed binary candidate. Until its signed public catalog, immutable assets and isolated QA have actually been verified, it is **not a public update**. The existing v2.2.4 public release is marked QA HOLD.
 
-- [2.2.4 release notes](docs/RELEASE-NOTES-2.2.4.md)
-- [2.2.4 SHA-256 inventory](docs/SHA256SUMS-2.2.4.txt)
-- [2.2.2 release notes](docs/RELEASE-NOTES-2.2.2.md)
-- [Installation and upgrade instructions](docs/INSTALLATION.md)
+- [Gateway 2.2.5 release notes](docs/RELEASE-NOTES-2.2.5.md)
+- [Gateway 2.2.5 SHA-256 kit inventory](docs/SHA256SUMS-2.2.5.txt)
+- [Installation and upgrade](docs/INSTALLATION.md)
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
-
-## Gateway 2.2.2 publication preparation
-
-Gateway 2.2.2 is prepared but not yet a public installation offering. The
-original binary packages have passed their trusted build and public binary
-security audits. **Public Latest still offers 2.2.1** until the signed
-version 2.2.2 release and catalog are officially published and verified.
-
-- [Gateway 2.2.2 release notes (advance)](docs/RELEASE-NOTES-2.2.2.md)
-- [Gateway 2.2.2 kit SHA-256 inventory](docs/SHA256SUMS-2.2.2.txt)
-- [Installation, upgrade and rollback](docs/INSTALLATION.md)
 
 ## Supported Gateway packages
 

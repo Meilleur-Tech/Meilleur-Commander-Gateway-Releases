@@ -47,3 +47,7 @@ must explicitly press the Update Center Install button for PROD.
 ## Gateway 2.2.4
 
 Gateway 2.2.4 for x86_64 Unraid and Linux VM must be installed from the verified signed Public Beta Update Center only. Confirm the previous healthy release, current pre-update backup, exact package SHA-256, and recovery-plane rollback before updating.
+
+## Gateway 2.2.5 installation and update
+
+For Gateway 2.2.5, use the supported x86_64 Debian/Ubuntu Linux VM or Unraid kit. Verify the RSA-SHA256 signature of the beta channel and matching SHA-256 kit, keep a working backup and confirm installation using the normal Gateway Update Center. The optional universal MCP connection is OFF by default and needs explicit administrator consent. PROD is never installed merely because the public release has appeared.

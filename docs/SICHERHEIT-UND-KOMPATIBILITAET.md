@@ -34,3 +34,7 @@ acceptance must be proven separately from successful source/audit tests.
 ## Gateway 2.2.4
 
 Gateway 2.2.4 is for x86_64 Unraid and supported Linux VM hosts. The signed catalog is RSA-SHA256 verified with the existing pinned Gateway key. New MCP providers, OAuth scopes and approved tool schemas remain opt-in, with provider permissions and identity checks enforced separately.
+
+## Gateway 2.2.5 security and compatibility
+
+Gateway 2.2.5 supports x86_64 Debian/Ubuntu Linux VM and Unraid installation kits, with the Gateway and Project Worker tied to one source SHA. Pinned RSA-SHA256 catalog signatures and source/package SHA-256 integrity remain mandatory. The optional universal MCP client uses explicit owner consent, TLS hostname checks and authorized IP pinning against DNS rebinding. Native desktop clients are not part of this public Gateway release.
