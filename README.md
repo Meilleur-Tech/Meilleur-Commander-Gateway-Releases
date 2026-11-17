@@ -4,7 +4,7 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.5** is the next reviewed binary candidate. Until its signed public catalog, immutable assets and isolated QA have actually been verified, it is **not a public update**. The existing v2.2.4 public release is marked QA HOLD.
+Gateway **2.2.5** is the current signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. The immutable Gateway and Project Worker images passed package verification, isolated QA install, health, recovery to the previous version and re-installation. The public update is offered through the signed Gateway Update Center; installation on PROD remains a separate, explicit owner action.
 
 - [Gateway 2.2.5 release notes](docs/RELEASE-NOTES-2.2.5.md)
 - [Gateway 2.2.5 SHA-256 kit inventory](docs/SHA256SUMS-2.2.5.txt)

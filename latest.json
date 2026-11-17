@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:3277ee59566c2630500ffcdd5f876c33fab61fa5b600c8540ccc4a8d9fcce884",
+  "gateway_oci_digest": "sha256:1decb211be4d3560d226b039b11925e6bca2a7358b8f89e64690d0c40c4090fa",
   "kits": {
     "linux-vm": {
-      "bytes": 919120474,
-      "sha256": "1eef11e7595c6c2af31b77dc351eb825224567465b91cf26371e34308a1647dc",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.4/meilleur-commander-linux-vm-2.2.4.tar.gz"
+      "bytes": 919214870,
+      "sha256": "6ffddf2717474b1f2056db9850788d47bd99ae0ac4103ad28a0827b375b15a0a",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.5/meilleur-commander-linux-vm-2.2.5.tar.gz"
     },
     "unraid": {
-      "bytes": 919131401,
-      "sha256": "157080a3224687966e249b7b96647eecc44dba3ddf13e9b68a1de62e9119ad21",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.4/meilleur-commander-unraid-2.2.4.tar.gz"
+      "bytes": 919225574,
+      "sha256": "7123bbff2cc1e582e2bae753de34f9f6b25585d1ffabda78afdf358212ae8059",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.5/meilleur-commander-unraid-2.2.5.tar.gz"
     }
   },
-  "notes": "# Fabric Commander Gateway 2.2.4\nVersion 2.2.4 extends the Gateway MCP client to interoperate with modern MCP protocol 2026-07-28 and legacy 2025-11-25 servers. The upstream MCP SDK stack uses FastMCP 4.2.0, MCP Python SDK 2.3.0 and httpx2. Generic upstream MCP server connections can be registered in the Gateway operator interface, with separate tool/schema approval and least-privilege authorization.\n\nImportant security behavior: tool input and declared output schemas are pinned and validated; changes cause an approval hold. Unknown or unsuccessful remote tool outcomes are not automatically retried. OAuth 2.1 with PKCE can be configured for supported providers, including explicit browser consent and per-provider token isolation. Generic provider login may require the provider to pre-register the client ID and callback address; discovery alone does not mean authenticated or authorized.\n\nRuntime correction: the final 2.2.4 package explicitly includes httpx==0.28.1 and verifies runtime imports in its trusted container build. The earlier unpublished 2.2.4 candidate failed isolated QA startup and was withdrawn before any public or production deployment. This replacement retains version 2.2.4 and uses the newly reviewed source.\n\nCompatibility: official Unraid and Linux x86_64 VM kits contain the same frozen Gateway and Project Worker OCI images. Native Windows, macOS and Linux clients are distributed independently. New MCP integrations remain opt-in; installing 2.2.4 does not automatically authorize NOC, Home Assistant, Lexit or other upstream servers.\n\nInstallation: only use the matching immutable published package and signed beta update catalog. Verify exact SHA-256, pinned RSA-SHA256 signature, Gateway/Worker identity and readiness before applying the update. Keep a verified pre-update backup and previous known-good version. Use the normal Gateway Update Center and recovery-plane rollback rather than forced Docker replacement. Control beta.60 live OAuth/browser consent and ChatGPT end-to-end tools are separate acceptance tasks, not guaranteed by installing this Gateway release.\n\nFrozen reviewed product source: b4d7865066603ab4ed153d166bcf53356e7efe44.",
-  "published_at": "2026-11-16T08:40:00Z",
+  "notes": "# Fabric Commander Gateway 2.2.5 release notes\n\n## Changes and improvements\n\nGateway 2.2.5 extends the optional, provider-neutral upstream MCP integration. Compatible MCP servers can be registered without requiring any specific network controller, Lexit installation or Unraid host. The administrator configures OAuth authorization and consent separately; the feature remains OFF until explicitly enabled.\n\nThe Gateway update-status response now reports the running runtime version and its verified source identity separately from any older cached update-check result. This avoids presenting an outdated cached version as the active installation.\n\n## Installation and update\n\nUse the immutable binary-only x86_64 Debian/Ubuntu Linux VM or Unraid kit that matches your host. Both kits include the Gateway and matching Project Worker generated from the frozen source. Existing installations use the authenticated signed beta channel in the Gateway Update Center and explicitly confirm the update.\n\n## Rollback and recovery\n\nKeep the previous known-good Gateway image and a pre-update backup until Gateway health, MCP endpoint and Project Worker identity have been checked. The existing host recovery plane checks the new candidate and automatically restores the last known-good image if an activation fails. The public release itself never installs or updates PROD automatically.\n\n## Compatibility and security\n\nThe release uses the existing pinned RSA-SHA256 update catalog signature and per-platform SHA-256 hashes. Optional upstream MCP connections keep HTTPS hostname verification and OAuth PKCE S256; private-name or DNS-changing targets require the authorized IP bound to operator consent. An administrator may provide an optional additional local public CA root, but no signing private keys, account passwords or provider-specific certificates are included in the kits.\n\nAn installation does not by itself grant any access to a third-party server; a personal consent and authorized tool-call acceptance must be tested separately for each enabled provider. Native Windows, macOS and Linux clients have their own independent release channels.\n\nFrozen Gateway source SHA: ad7b313c5d4a9a3021fa6de51c13d15f3fd510a2.\n",
+  "published_at": "2026-11-17T06:57:27Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "b4d7865066603ab4ed153d166bcf53356e7efe44",
-  "source_tree": "83dda48ec2a2babef261704f1703d3eb07dff821",
+  "source_sha": "ad7b313c5d4a9a3021fa6de51c13d15f3fd510a2",
+  "source_tree": "db20f861aa2fc10f38e61398f9d7367a453ab906",
   "status": "published",
-  "tag": "v2.2.4",
-  "version": "2.2.4",
-  "worker_oci_digest": "sha256:f65f1d0b90f4c5ab7acba22d1262de024831c6eadeca5d8c498897caa12950b7"
+  "tag": "v2.2.5",
+  "version": "2.2.5",
+  "worker_oci_digest": "sha256:b5e7d7a4126296f18ee51416cfdf8456f4f81ab30164abbcffbad5a8c04a77b5"
 }
