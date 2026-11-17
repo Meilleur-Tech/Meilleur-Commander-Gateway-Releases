@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:1decb211be4d3560d226b039b11925e6bca2a7358b8f89e64690d0c40c4090fa",
+  "gateway_oci_digest": "sha256:1388cab1f4506b1910b02886f221855d5d66ca88c7ac915300d56a4d0ae9685d",
   "kits": {
     "linux-vm": {
-      "bytes": 919214870,
-      "sha256": "6ffddf2717474b1f2056db9850788d47bd99ae0ac4103ad28a0827b375b15a0a",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.5/meilleur-commander-linux-vm-2.2.5.tar.gz"
+      "bytes": 919300059,
+      "sha256": "1df270db7ec7b94a67e017d1b0846c7f51f55e3b58262e38ca23a06021d01f63",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.6/meilleur-commander-linux-vm-2.2.6.tar.gz"
     },
     "unraid": {
-      "bytes": 919225574,
-      "sha256": "7123bbff2cc1e582e2bae753de34f9f6b25585d1ffabda78afdf358212ae8059",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.5/meilleur-commander-unraid-2.2.5.tar.gz"
+      "bytes": 919311423,
+      "sha256": "085285169ce573e2d233dacf87513449026d26a86d5d8018062b56d3d8e5f6fe",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.6/meilleur-commander-unraid-2.2.6.tar.gz"
     }
   },
-  "notes": "# Fabric Commander Gateway 2.2.5 release notes\n\n## Changes and improvements\n\nGateway 2.2.5 extends the optional, provider-neutral upstream MCP integration. Compatible MCP servers can be registered without requiring any specific network controller, Lexit installation or Unraid host. The administrator configures OAuth authorization and consent separately; the feature remains OFF until explicitly enabled.\n\nThe Gateway update-status response now reports the running runtime version and its verified source identity separately from any older cached update-check result. This avoids presenting an outdated cached version as the active installation.\n\n## Installation and update\n\nUse the immutable binary-only x86_64 Debian/Ubuntu Linux VM or Unraid kit that matches your host. Both kits include the Gateway and matching Project Worker generated from the frozen source. Existing installations use the authenticated signed beta channel in the Gateway Update Center and explicitly confirm the update.\n\n## Rollback and recovery\n\nKeep the previous known-good Gateway image and a pre-update backup until Gateway health, MCP endpoint and Project Worker identity have been checked. The existing host recovery plane checks the new candidate and automatically restores the last known-good image if an activation fails. The public release itself never installs or updates PROD automatically.\n\n## Compatibility and security\n\nThe release uses the existing pinned RSA-SHA256 update catalog signature and per-platform SHA-256 hashes. Optional upstream MCP connections keep HTTPS hostname verification and OAuth PKCE S256; private-name or DNS-changing targets require the authorized IP bound to operator consent. An administrator may provide an optional additional local public CA root, but no signing private keys, account passwords or provider-specific certificates are included in the kits.\n\nAn installation does not by itself grant any access to a third-party server; a personal consent and authorized tool-call acceptance must be tested separately for each enabled provider. Native Windows, macOS and Linux clients have their own independent release channels.\n\nFrozen Gateway source SHA: ad7b313c5d4a9a3021fa6de51c13d15f3fd510a2.\n",
-  "published_at": "2026-11-17T06:57:27Z",
+  "notes": "# Fabric Commander Gateway 2.2.6\n\n## MCP OAuth and monitoring integration\n- Uses the existing provider-neutral MCP connection wizard. Additional available OAuth scopes are discovered from the provider's metadata and require explicit selection and a new PKCE-protected authorization.\n- After authorized reconnect, the available MCP tools are rediscovered and matched to the already approved server trust profile and live, pinned schemas. The actual granted token scopes remain visible. No automatic permission elevation or device changes.\n- Control beta.65 monitoring tools can be exposed when the user's OAuth token genuinely contains monitor:read, the installed provider returns those tools and the applicable site/building ACL allows access. Unavailable RF/port data is not invented.\n\n## Release and compatibility\n- Less duplicate MeilleurCodeGuard/CI orchestration while retaining required product, MCP, security and trusted release checks.\n- Includes matching Gateway and Project Worker binaries for x86_64 Debian/Ubuntu Linux VMs and Unraid. Native clients use their own independent release channels.\n- Uses the existing pinned RSA-SHA256 update-catalog trust root and verified platform SHA-256 hashes.\n- Operator controls when the public update is installed on PROD through the normal Update Center. Public distribution never automatically installs PROD.\n- Source revision: dd4746b593e39b08f01185b470f55af9429b17fc.\n",
+  "published_at": "2026-11-17T10:51:25Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "ad7b313c5d4a9a3021fa6de51c13d15f3fd510a2",
-  "source_tree": "db20f861aa2fc10f38e61398f9d7367a453ab906",
+  "source_sha": "dd4746b593e39b08f01185b470f55af9429b17fc",
+  "source_tree": "c751d1c5b3940ea2e4a40ffa44489ee16b59887b",
   "status": "published",
-  "tag": "v2.2.5",
-  "version": "2.2.5",
-  "worker_oci_digest": "sha256:b5e7d7a4126296f18ee51416cfdf8456f4f81ab30164abbcffbad5a8c04a77b5"
+  "tag": "v2.2.6",
+  "version": "2.2.6",
+  "worker_oci_digest": "sha256:c65cb6724c7dad1c4a13e817006e46e27e82b909dbed0c5409ce1cbcba52970b"
 }

@@ -2,22 +2,21 @@
 
 This repository distributes binary-only Gateway and Project Worker releases for Linux hosts and Unraid. The packages include the self-hosted Gateway WebUI and its host recovery-plane helpers. They contain no source repository, credentials, customer data, or native desktop client installers.
 
-## Gateway 2.2.6 release candidate documentation
+## Current release
 
-The frozen and successfully tested Gateway **2.2.6** candidate is prepared for the signed beta channel. This documentation is published ahead of the immutable release and does not indicate that 2.2.6 is already installed on any customer's PROD host. For live update availability rely on the RSA-SHA256 signed `latest.json` catalog.
+Gateway **2.2.6** is the current RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. The immutable Gateway and matching Project Worker passed source/review checks, trusted build and independent R2 readback, isolated QA install, Gateway/WebUI/HTTPS and worker identity checks, and recursive binary-only package audits. Monitoring through an optional MCP provider still requires explicit provider OAuth consent and site/building permissions; no new access is granted by updating.
+
+The signed Gateway Update Center offers the binary kits on the beta channel; **installation on PROD is a separate, explicit owner action**, never performed automatically by publishing this release.
 
 - [Gateway 2.2.6 release notes](docs/RELEASE-NOTES-2.2.6.md)
 - [Gateway 2.2.6 SHA-256 kit inventory](docs/SHA256SUMS-2.2.6.txt)
-
-## Current release
-
-Gateway **2.2.5** is the current signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. The immutable Gateway and Project Worker images passed package verification, isolated QA install, health, recovery to the previous version and re-installation. The public update is offered through the signed Gateway Update Center; installation on PROD remains a separate, explicit owner action.
-
-- [Gateway 2.2.5 release notes](docs/RELEASE-NOTES-2.2.5.md)
-- [Gateway 2.2.5 SHA-256 kit inventory](docs/SHA256SUMS-2.2.5.txt)
 - [Installation and upgrade](docs/INSTALLATION.md)
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
+
+## Previous release
+
+Gateway **2.2.5** remains available at its immutable [release tag](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.5), with [release notes](docs/RELEASE-NOTES-2.2.5.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.5.txt). The update catalog now selects 2.2.6 for a consenting owner, without modifying existing PROD installations.
 
 ## Supported Gateway packages
 
