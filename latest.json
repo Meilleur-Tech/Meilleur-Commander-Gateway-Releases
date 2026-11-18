@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:1388cab1f4506b1910b02886f221855d5d66ca88c7ac915300d56a4d0ae9685d",
+  "gateway_oci_digest": "sha256:cf16f650470282cbf5398ab91433228754b21d15e40241208d854d4457e379a4",
   "kits": {
     "linux-vm": {
-      "bytes": 919300059,
-      "sha256": "1df270db7ec7b94a67e017d1b0846c7f51f55e3b58262e38ca23a06021d01f63",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.6/meilleur-commander-linux-vm-2.2.6.tar.gz"
+      "bytes": 919325700,
+      "sha256": "5777ceb7ed85ed4fd471d8a6cc36b6f837856e965b3850db7baa0c64971f7685",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.7/meilleur-commander-linux-vm-2.2.7.tar.gz"
     },
     "unraid": {
-      "bytes": 919311423,
-      "sha256": "085285169ce573e2d233dacf87513449026d26a86d5d8018062b56d3d8e5f6fe",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.6/meilleur-commander-unraid-2.2.6.tar.gz"
+      "bytes": 919336996,
+      "sha256": "a141654b4597654690a86cde5deabb10419371e6b6ceaaa2f987236f795faf43",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.7/meilleur-commander-unraid-2.2.7.tar.gz"
     }
   },
-  "notes": "# Fabric Commander Gateway 2.2.6\n\n## MCP OAuth and monitoring integration\n- Uses the existing provider-neutral MCP connection wizard. Additional available OAuth scopes are discovered from the provider's metadata and require explicit selection and a new PKCE-protected authorization.\n- After authorized reconnect, the available MCP tools are rediscovered and matched to the already approved server trust profile and live, pinned schemas. The actual granted token scopes remain visible. No automatic permission elevation or device changes.\n- Control beta.65 monitoring tools can be exposed when the user's OAuth token genuinely contains monitor:read, the installed provider returns those tools and the applicable site/building ACL allows access. Unavailable RF/port data is not invented.\n\n## Release and compatibility\n- Less duplicate MeilleurCodeGuard/CI orchestration while retaining required product, MCP, security and trusted release checks.\n- Includes matching Gateway and Project Worker binaries for x86_64 Debian/Ubuntu Linux VMs and Unraid. Native clients use their own independent release channels.\n- Uses the existing pinned RSA-SHA256 update-catalog trust root and verified platform SHA-256 hashes.\n- Operator controls when the public update is installed on PROD through the normal Update Center. Public distribution never automatically installs PROD.\n- Source revision: dd4746b593e39b08f01185b470f55af9429b17fc.\n",
-  "published_at": "2026-11-17T10:51:25Z",
+  "notes": "# Fabric Commander Gateway 2.2.7\n\n## Universal MCP connection wizard\n- Provider-neutral onboarding for HTTPS MCP services, including NOC & Control, Lexit Apps and internal MCP endpoints.\n- Optional, validated IPv4/IPv6 DNS resolver configuration and the existing trusted CA bundle survive initial installation, updates and recovery across supported Linux-based hosts.\n- Clearer DNS, TLS, OAuth, callback and tool-discovery error states; actual OAuth grants and user-selected server trust control tool approval.\n- Explicitly approved server-wide trust can discover available tools with pinned schemas. Permissions are never silently elevated.\n\n## Chat titles and operations\n- Task-relevant chat titles take priority over generic system-diagnostic defaults.\n- Retains the registered RSA-SHA256 public-update trust root, matching Gateway and Project Worker images, and verified rollback support.\n- Supports x86_64 Debian/Ubuntu Linux VMs and Unraid. Native desktop clients keep their independent release channels.\n\nPublic distribution does not install a release on PROD. The operator selects the update in the existing Gateway Update Center. OAuth consent remains under the provider user's control.\n",
+  "published_at": "2026-11-18T15:46:17Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "dd4746b593e39b08f01185b470f55af9429b17fc",
-  "source_tree": "c751d1c5b3940ea2e4a40ffa44489ee16b59887b",
+  "source_sha": "3695d2edd6e77e14a0d17fea1a5209fdbed2c2a6",
+  "source_tree": "21ce33ffc8f29fe372f78eb8be4b1b87cc39b07d",
   "status": "published",
-  "tag": "v2.2.6",
-  "version": "2.2.6",
-  "worker_oci_digest": "sha256:c65cb6724c7dad1c4a13e817006e46e27e82b909dbed0c5409ce1cbcba52970b"
+  "tag": "v2.2.7",
+  "version": "2.2.7",
+  "worker_oci_digest": "sha256:fde52cdcf60415f733c55cb40fcc90a88f2f0724f03e5c4db36bba550cd68f15"
 }
