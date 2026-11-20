@@ -45,3 +45,9 @@ If 2.2.5 is not offered, verify the public signed catalog, installation identity
 ## Gateway 2.2.6 MCP monitoring authorization
 
 If `find_clients`, `get_client_details` or `get_ap_link_diagnostics` is not authorized, inspect the actual provider-granted token scopes, active connection state, live discovered tool schemas and permitted site/building ACL. For `monitor:read`, reconnect with explicit browser OAuth/PKCE consent; never edit token scopes or manually create a tool. Missing collection coverage and stale device samples are not proof of an RF fault. The independent native client release channel is unaffected.
+
+## Gateway 2.2.8 operator troubleshooting
+
+If **2.2.8** is announced but no valid update appears, verify the distribution's signed RSA-SHA256 `latest.json`, the release tag, installed platform, expected kit SHA256 and the Update Center's actual catalog status. The source repository or GitHub CI displaying 2.2.8 does not make an installable signed release.
+
+During an interrupted update, inspect the operation ID and its real phase, running container identity, previous known-good image, backup and health. If failure follows Docker cutover, require `failed/rollback_succeeded` with a healthy previous container before retrying. For an in-flight restart the same authenticated operation should progress to `completed`; never edit stored operation JSON or bypass a missing QA gate. Capture sanitized log evidence without credentials.

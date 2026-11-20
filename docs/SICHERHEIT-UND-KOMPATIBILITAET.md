@@ -42,3 +42,9 @@ Gateway 2.2.5 supports x86_64 Debian/Ubuntu Linux VM and Unraid installation kit
 ## Gateway 2.2.6 authorization and binary identity
 
 The optional provider-neutral MCP integration uses explicit human consent and OAuth PKCE S256. Permissions derive from verified provider/resource discovery, but activation requires an actual token grant, current provider tool list and the site's own access control. `inventory:read` alone must not authorize monitoring; monitoring tools are read-only and existing safeguards reject mutating scopes and untrusted schemas. The release preserves the registered RSA-SHA256 public update signature and SHA-256 digests, without introducing a new signing identity or any dependency on native client upgrades. Publishing a release never installs it on PROD automatically.
+
+## Gateway 2.2.8 RSA bridge and compatibility
+
+Gateway **2.2.8** keeps the existing pinned RSA-SHA256 v2 catalog verification compatible with installations on supported x86_64 Linux VMs and Unraid. The reviewed source commit is `851e57674a68201f5aa507522cb15f1e3907d6df`. The signing candidate binds the original trusted OCI digests, immutable platform-manifest checksum, two package SHA-256 values and a separately signed six-check isolated QA receipt. This prevents mixing older QA evidence with a newer build.
+
+Future Sigstore/Cosign OIDC verification remains preparatory and is not an active trust fallback in this release. Gateway MCP OAuth rights for NOC and Lexit Apps still require individual user consent, explicit scopes, verified provider metadata and site ACL. Native Windows/macOS/Linux desktop client releases are separately signed and not contained in the Gateway packages. Always preserve rollback data and confirm live health; publishing is not a PROD update.
