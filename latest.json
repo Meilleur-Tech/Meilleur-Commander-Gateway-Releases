@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:cf16f650470282cbf5398ab91433228754b21d15e40241208d854d4457e379a4",
+  "gateway_oci_digest": "sha256:701036a149d00dd42c87b7dd437043bf54446d2e76de2ef32735aa0b58ec6333",
   "kits": {
     "linux-vm": {
-      "bytes": 919325700,
-      "sha256": "5777ceb7ed85ed4fd471d8a6cc36b6f837856e965b3850db7baa0c64971f7685",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.7/meilleur-commander-linux-vm-2.2.7.tar.gz"
+      "bytes": 919350019,
+      "sha256": "634fe72457fc634a80bf3b17bfeaa775fc941d15163211b590500125263726e8",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.8/meilleur-commander-linux-vm-2.2.8.tar.gz"
     },
     "unraid": {
-      "bytes": 919336996,
-      "sha256": "a141654b4597654690a86cde5deabb10419371e6b6ceaaa2f987236f795faf43",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.7/meilleur-commander-unraid-2.2.7.tar.gz"
+      "bytes": 919361078,
+      "sha256": "cf92d64323177dc847e3451441f62bcb76f84e7265a026526adfea1486df7b15",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.8/meilleur-commander-unraid-2.2.8.tar.gz"
     }
   },
-  "notes": "# Fabric Commander Gateway 2.2.7\n\n## Universal MCP connection wizard\n- Provider-neutral onboarding for HTTPS MCP services, including NOC & Control, Lexit Apps and internal MCP endpoints.\n- Optional, validated IPv4/IPv6 DNS resolver configuration and the existing trusted CA bundle survive initial installation, updates and recovery across supported Linux-based hosts.\n- Clearer DNS, TLS, OAuth, callback and tool-discovery error states; actual OAuth grants and user-selected server trust control tool approval.\n- Explicitly approved server-wide trust can discover available tools with pinned schemas. Permissions are never silently elevated.\n\n## Chat titles and operations\n- Task-relevant chat titles take priority over generic system-diagnostic defaults.\n- Retains the registered RSA-SHA256 public-update trust root, matching Gateway and Project Worker images, and verified rollback support.\n- Supports x86_64 Debian/Ubuntu Linux VMs and Unraid. Native desktop clients keep their independent release channels.\n\nPublic distribution does not install a release on PROD. The operator selects the update in the existing Gateway Update Center. OAuth consent remains under the provider user's control.\n",
-  "published_at": "2026-11-18T15:46:17Z",
+  "notes": "# Fabric Commander Gateway 2.2.8\n\n**Quellversion:** 2.2.8\n**Freigegebener Source-Commit:** `851e57674a68201f5aa507522cb15f1e3907d6df`\n**Plattformen:** x86_64 Linux VM (Debian/Ubuntu) und Unraid\n\n## \u00c4nderungen\n\n- Der universelle MCP-Wizard zeigt dynamisch die vom Anbieter tats\u00e4chlich angebotenen und durch HTTPS-Metadaten verifizierten OAuth-Berechtigungen. Neue NOC-Rechte bleiben ungegrantet, bis der Benutzer sie ausdr\u00fccklich freigibt; erh\u00f6hte Rechte ben\u00f6tigen eine zus\u00e4tzliche Best\u00e4tigung.\n- Die OAuth-Neuanmeldung f\u00fcr Lexit Apps kann bewusst gestartet werden. Ein alter Token bleibt erhalten, bis der neue PKCE-Callback vollst\u00e4ndig erfolgreich ist. Fehlender pers\u00f6nlicher Consent wird als erneute Autorisierung und nicht als allgemeiner Verbindungsfehler gemeldet.\n- Die native Bridge vermeidet besch\u00e4digte oder unn\u00f6tig gro\u00dfe Textkopien von Bin\u00e4rdateien und liefert bei zu gro\u00dfen Resultaten einen eindeutigen Fehler statt wiederholter Reconnects.\n- Die Linux-VM-Recovery stellt beim fehlgeschlagenen Docker-Cutover unmittelbar die vorherige bekannte gute Version wieder her. Publisher-Korrekturen vereinheitlichen den GitHub-Ref-Updatepfad und die Pr\u00fcfung aller sieben Release-Assets.\n\n## Installation und Update\n\nNach der \u00f6ffentlichen Freigabe erfolgt die Installation \u00fcber den bestehenden Gateway Update Center. Vorher die RSA-Signatur, Paket-SHA256, passende Plattform, die Gateway-/Worker-Imageidentit\u00e4ten, verf\u00fcgbaren Speicher sowie das Backup pr\u00fcfen. Ein ver\u00f6ffentlichter Build installiert niemals automatisch das Gateway auf PROD.\n\n## Rollback und Sicherheit\n\nDie isolierte QA hat f\u00fcr exakt diesen Commit den automatischen Image-Rollback auf Gateway 2.2.7 bei verweigertem Kandidatenstart sowie einen echten Docker-Neustart w\u00e4hrend einer aktiven 2.2.8-Updateoperation mit erfolgreicher Fortsetzung nachgewiesen. Die sechs QA-Nachweise wurden separat signiert und an die Originalartefakte gebunden. Ungekl\u00e4rte Operationszust\u00e4nde bleiben ein Stoppsignal.\n\nDas Update bleibt kompatibel mit der bisherigen RSA-SHA256-Verifikation. Eine zuk\u00fcnftige Sigstore-/Cosign-Signierung ist vorbereitet, aber f\u00fcr Gateway 2.2.8 nicht als produktiver Signaturpfad aktiviert. OAuth-Rechte, Kunden-ACLs und Werkzeugfreigaben werden durch das Update nicht automatisch erweitert.\n\n## Kompatibilit\u00e4t\n\nDie offiziellen Gateway-Kits sind f\u00fcr Unraid und unterst\u00fctzte Debian-/Ubuntu-Linux-VMs auf x86_64 bestimmt. Native macOS-, Windows- und Linux-Desktopclients behalten eigenst\u00e4ndige Releases und Signaturen. Ein Gateway-Update ersetzt keinen Client-Build.",
+  "published_at": "2026-11-20T09:46:30Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "3695d2edd6e77e14a0d17fea1a5209fdbed2c2a6",
-  "source_tree": "21ce33ffc8f29fe372f78eb8be4b1b87cc39b07d",
+  "source_sha": "851e57674a68201f5aa507522cb15f1e3907d6df",
+  "source_tree": "3a178b83780155eeadfb8a32a73d790d3a85849c",
   "status": "published",
-  "tag": "v2.2.7",
-  "version": "2.2.7",
-  "worker_oci_digest": "sha256:fde52cdcf60415f733c55cb40fcc90a88f2f0724f03e5c4db36bba550cd68f15"
+  "tag": "v2.2.8",
+  "version": "2.2.8",
+  "worker_oci_digest": "sha256:a2a85d7b1ec37fc3b405b6cb2de15dce5c9ac9b2859c5bb583589ddfc48eb4e0"
 }
