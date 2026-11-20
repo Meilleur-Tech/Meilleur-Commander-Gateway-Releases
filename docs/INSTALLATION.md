@@ -55,3 +55,9 @@ For Gateway 2.2.5, use the supported x86_64 Debian/Ubuntu Linux VM or Unraid kit
 ## Gateway 2.2.6 OAuth consent
 
 After installing Gateway 2.2.6, the optional upstream MCP Wizard discovers the permissions genuinely advertised by the provider. Select `monitor:read` only when needed and complete the new provider OAuth consent. Existing `inventory:read` tokens do not silently gain monitoring access. The normal signed Update Center is the recommended installation path, and customer PROD activation is always explicit.
+
+## Gateway 2.2.8 signed update and installation
+
+For the supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts, version **2.2.8** is installed only after the public beta catalog contains its valid pinned RSA-SHA256 signature, matching immutable kit SHA-256 and Gateway/Project Worker identities. The Linux-VM kit is `meilleur-commander-linux-vm-2.2.8.tar.gz`; the Unraid kit is `meilleur-commander-unraid-2.2.8.tar.gz`.
+
+Keep the original pre-update backup and the known-good 2.2.7 or 2.2.6 container until successful postcheck. The 2.2.8 recovery plane has passed isolated fault-injection automatic rollback and in-flight Docker restart/resume. A status of `outcome_unknown` still means stop, investigate and reconcile before retrying. Use the existing Update Center, never an unsigned OCI image. A public release does not trigger PROD activation automatically.
