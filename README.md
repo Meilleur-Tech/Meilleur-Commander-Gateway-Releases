@@ -38,3 +38,12 @@ Gateway **2.2.8** is prepared from the reviewed source commit `851e57674a68201f5
 - [Gateway 2.2.8 asset SHA-256 inventory](docs/SHA256SUMS-2.2.8.txt)
 
 Documentation preparation is not public-update authorization. Customers may install this version only **after** the immutable v2.2.8 release has been published and the pinned RSA-SHA256 signature on the distribution `latest.json` has been verified. Publishing never installs on owner PROD.
+
+## Prepared Gateway 2.2.9
+
+Gateway **2.2.9** is prepared from the reviewed source commit `5fdbdb2f3148d4bfee326b4f64f1e228ddd3ed55`. Its original Trusted Build, isolated six-check QA, automatic rollback, resume after a restart, signed QA receipt and two audited binary-only kits have been independently verified.
+
+- [Gateway 2.2.9 release notes](docs/RELEASE-NOTES-2.2.9.md)
+- [Gateway 2.2.9 asset SHA-256 inventory](docs/SHA256SUMS-2.2.9.txt)
+
+Documentation preparation is not public-update authorization. Customers may install this version only **after** the immutable v2.2.9 release has been published and the pinned RSA-SHA256 signature on the distribution `latest.json` has been verified. Publishing never installs on a production system.
