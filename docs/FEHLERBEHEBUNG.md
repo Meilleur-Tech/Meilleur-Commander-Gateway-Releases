@@ -51,3 +51,9 @@ If `find_clients`, `get_client_details` or `get_ap_link_diagnostics` is not auth
 If **2.2.8** is announced but no valid update appears, verify the distribution's signed RSA-SHA256 `latest.json`, the release tag, installed platform, expected kit SHA256 and the Update Center's actual catalog status. The source repository or GitHub CI displaying 2.2.8 does not make an installable signed release.
 
 During an interrupted update, inspect the operation ID and its real phase, running container identity, previous known-good image, backup and health. If failure follows Docker cutover, require `failed/rollback_succeeded` with a healthy previous container before retrying. For an in-flight restart the same authenticated operation should progress to `completed`; never edit stored operation JSON or bypass a missing QA gate. Capture sanitized log evidence without credentials.
+
+## Gateway 2.2.9 operator troubleshooting
+
+If **2.2.9** is announced but no valid update appears, verify the distribution's signed RSA-SHA256 `latest.json`, the release tag, installed platform, expected kit SHA256 and the Update Center's actual catalog status. A displayed version number alone does not make an installable signed release.
+
+If `upstream_*` tools fail with `upstream_policy_unavailable`, the MCP policy store is missing while its marker exists: restore it from the backup, or set `MC_UPSTREAM_POLICY_RECREATE=1` once (an empty policy with the default `deny`, with a warning at every start while the variable is set). If an update is refused with `downgrade_not_allowed`, the target is older than the installed version. If a provider connection asks for a new sign-in after the update, the stored refresh authorization was missing or revoked; reconnect with explicit consent. Never edit stored operation files or bypass a missing QA gate; capture sanitized log evidence without credentials.
