@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:701036a149d00dd42c87b7dd437043bf54446d2e76de2ef32735aa0b58ec6333",
+  "gateway_oci_digest": "sha256:ba4f5c04644b1d4acb6254f27233744a20deb5944461279559b1f92cc27970d4",
   "kits": {
     "linux-vm": {
-      "bytes": 919350019,
-      "sha256": "634fe72457fc634a80bf3b17bfeaa775fc941d15163211b590500125263726e8",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.8/meilleur-commander-linux-vm-2.2.8.tar.gz"
+      "bytes": 920095052,
+      "sha256": "9670e2b06ed2574432e7621ac3eba2aae8e7f8d240b261c2d76ea5809b6f2337",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.9/meilleur-commander-linux-vm-2.2.9.tar.gz"
     },
     "unraid": {
-      "bytes": 919361078,
-      "sha256": "cf92d64323177dc847e3451441f62bcb76f84e7265a026526adfea1486df7b15",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.8/meilleur-commander-unraid-2.2.8.tar.gz"
+      "bytes": 920105712,
+      "sha256": "241365bf2646af3afcd9e5dcf31f0695cf8ee312321b184f260acc17c98b9c93",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.9/meilleur-commander-unraid-2.2.9.tar.gz"
     }
   },
-  "notes": "# Fabric Commander Gateway 2.2.8\n\n**Quellversion:** 2.2.8\n**Freigegebener Source-Commit:** `851e57674a68201f5aa507522cb15f1e3907d6df`\n**Plattformen:** x86_64 Linux VM (Debian/Ubuntu) und Unraid\n\n## \u00c4nderungen\n\n- Der universelle MCP-Wizard zeigt dynamisch die vom Anbieter tats\u00e4chlich angebotenen und durch HTTPS-Metadaten verifizierten OAuth-Berechtigungen. Neue NOC-Rechte bleiben ungegrantet, bis der Benutzer sie ausdr\u00fccklich freigibt; erh\u00f6hte Rechte ben\u00f6tigen eine zus\u00e4tzliche Best\u00e4tigung.\n- Die OAuth-Neuanmeldung f\u00fcr Lexit Apps kann bewusst gestartet werden. Ein alter Token bleibt erhalten, bis der neue PKCE-Callback vollst\u00e4ndig erfolgreich ist. Fehlender pers\u00f6nlicher Consent wird als erneute Autorisierung und nicht als allgemeiner Verbindungsfehler gemeldet.\n- Die native Bridge vermeidet besch\u00e4digte oder unn\u00f6tig gro\u00dfe Textkopien von Bin\u00e4rdateien und liefert bei zu gro\u00dfen Resultaten einen eindeutigen Fehler statt wiederholter Reconnects.\n- Die Linux-VM-Recovery stellt beim fehlgeschlagenen Docker-Cutover unmittelbar die vorherige bekannte gute Version wieder her. Publisher-Korrekturen vereinheitlichen den GitHub-Ref-Updatepfad und die Pr\u00fcfung aller sieben Release-Assets.\n\n## Installation und Update\n\nNach der \u00f6ffentlichen Freigabe erfolgt die Installation \u00fcber den bestehenden Gateway Update Center. Vorher die RSA-Signatur, Paket-SHA256, passende Plattform, die Gateway-/Worker-Imageidentit\u00e4ten, verf\u00fcgbaren Speicher sowie das Backup pr\u00fcfen. Ein ver\u00f6ffentlichter Build installiert niemals automatisch das Gateway auf PROD.\n\n## Rollback und Sicherheit\n\nDie isolierte QA hat f\u00fcr exakt diesen Commit den automatischen Image-Rollback auf Gateway 2.2.7 bei verweigertem Kandidatenstart sowie einen echten Docker-Neustart w\u00e4hrend einer aktiven 2.2.8-Updateoperation mit erfolgreicher Fortsetzung nachgewiesen. Die sechs QA-Nachweise wurden separat signiert und an die Originalartefakte gebunden. Ungekl\u00e4rte Operationszust\u00e4nde bleiben ein Stoppsignal.\n\nDas Update bleibt kompatibel mit der bisherigen RSA-SHA256-Verifikation. Eine zuk\u00fcnftige Sigstore-/Cosign-Signierung ist vorbereitet, aber f\u00fcr Gateway 2.2.8 nicht als produktiver Signaturpfad aktiviert. OAuth-Rechte, Kunden-ACLs und Werkzeugfreigaben werden durch das Update nicht automatisch erweitert.\n\n## Kompatibilit\u00e4t\n\nDie offiziellen Gateway-Kits sind f\u00fcr Unraid und unterst\u00fctzte Debian-/Ubuntu-Linux-VMs auf x86_64 bestimmt. Native macOS-, Windows- und Linux-Desktopclients behalten eigenst\u00e4ndige Releases und Signaturen. Ein Gateway-Update ersetzt keinen Client-Build.",
-  "published_at": "2026-11-20T09:46:30Z",
+  "notes": "# Fabric Commander Gateway 2.2.9\n\n**Freigegebener Source-Commit:** `5fdbdb2f3148d4bfee326b4f64f1e228ddd3ed55`\n**Plattformen:** x86_64 Linux VM (Debian/Ubuntu) und Unraid\n\n## \u00c4nderungen\n\n- **OAuth zu MCP-Anbietern:** Abgelaufene Access-Tokens werden nicht mehr weiterverwendet; das Gateway nutzt den bereits genehmigten Refresh-Token ohne neuen Browser-Consent.\n- **Regelwerk f\u00fcr MCP-Verbindungen:** Betreiber legen fest, welcher Client welche Werkzeuge nutzen darf (erste passende Regel gilt, Standard `allow`), Verwaltung in 2.2.9 \u00fcber die WebUI-API. Grenze: Ein Verbot f\u00fcr einen Client l\u00e4sst sich durch eine Neuregistrierung (neuer Fingerprint) umgehen.\n- **Werkzeug-Freigaben:** Werkzeuge mit ver\u00e4ndertem Schema werden angehalten statt still neu freigegeben.\n- **Zugangsdaten und Pairing:** WebUI-Zugangsdatei sofort `0600` und atomar, Passw\u00f6rter h\u00f6chstens 256 Zeichen, Pairing-Limit je Quelle, verz\u00f6gerte Fehlversuche, CSRF beim Pairing.\n- **Bridge:** kein Bearer-Token an Weiterleitungsziele, robusterer Heartbeat.\n- **Update und Betrieb:** Downgrades werden blockiert, HEALTHCHECK im Image, Federation-Edge ohne root.\n- **Abh\u00e4ngigkeiten:** opentelemetry-api 1.45.2, PyJWT 2.15.1 und dnspython 2.9.2 schlie\u00dfen 20 von 21 gemeldeten Schwachstellen.\n- **Enrollment:** Einmal-Code per `--code-stdin` oder `--code-file`.\n- **WebUI:** Auswahlfelder in Aktionsdialogen wieder bedienbar, verst\u00e4ndliche MCP-Fehler, weitere Bedienkorrekturen.\n- **Claude.ai:** Der Claude.ai-Callback wird zus\u00e4tzlich zu den ChatGPT-Callbacks akzeptiert.\n\n## Hinweise f\u00fcr Betreiber (vor dem Update lesen)\n\n1. Der erste Start legt das MCP-Regelwerk `policy.sqlite3` mit Standard `allow` an; bestehende Verbindungen laufen weiter.\n2. Nach einem Control-/NOC-Update ver\u00e4nderte Werkzeuge in der WebUI erneut freigeben.\n3. Neue Variable `MC_CLIENT_PAIRING_MAX_PER_SOURCE` (Standard 25); hinter einem Tunnel nur wirksam, wenn er in `MC_WEB_TRUSTED_PROXIES` steht.\n4. `MC_WEB_PASSWORD` mit mehr als 1024 Zeichen gilt als nicht konfiguriert.\n5. Eine weiterleitende `gateway_url` durch die endg\u00fcltige HTTPS-Adresse ersetzen.\n6. Nur bei Federation: ein von root angelegtes `/state` einmalig mit `chown -R 10001:10001` \u00fcbergeben.\n\nDie vollst\u00e4ndigen Release-Notes mit allen Details stehen in `docs/RELEASE-NOTES-2.2.9.md` im \u00f6ffentlichen Gateway-Releases-Repository.\n\n## Sicherheit\n\nDie isolierte QA hat f\u00fcr exakt diesen Commit sechs Pr\u00fcfungen bestanden (Bin\u00e4r-Paket, Update, Fortschritt, Postcheck, Fortsetzung nach Neustart, automatischer Rollback). Das Update bleibt mit der bisherigen RSA-SHA256-Verifikation kompatibel. OAuth-Rechte, Kunden-ACLs und Werkzeugfreigaben werden nicht automatisch erweitert. Ein ver\u00f6ffentlichter Build installiert sich niemals automatisch auf einem Produktivsystem.",
+  "published_at": "2026-11-22T17:45:33Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "851e57674a68201f5aa507522cb15f1e3907d6df",
-  "source_tree": "3a178b83780155eeadfb8a32a73d790d3a85849c",
+  "source_sha": "5fdbdb2f3148d4bfee326b4f64f1e228ddd3ed55",
+  "source_tree": "f1cbaa2e8a914e6ab16b33e5fc4c31a126250f0f",
   "status": "published",
-  "tag": "v2.2.8",
-  "version": "2.2.8",
-  "worker_oci_digest": "sha256:a2a85d7b1ec37fc3b405b6cb2de15dce5c9ac9b2859c5bb583589ddfc48eb4e0"
+  "tag": "v2.2.9",
+  "version": "2.2.9",
+  "worker_oci_digest": "sha256:91bda637148c573e07b423f89d6b0f7aa82be3f810ba120c78f296149170004b"
 }
