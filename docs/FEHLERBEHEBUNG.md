@@ -57,3 +57,9 @@ During an interrupted update, inspect the operation ID and its real phase, runni
 If **2.2.9** is announced but no valid update appears, verify the distribution's signed RSA-SHA256 `latest.json`, the release tag, installed platform, expected kit SHA256 and the Update Center's actual catalog status. A displayed version number alone does not make an installable signed release.
 
 If `upstream_*` tools fail with `upstream_policy_unavailable`, the MCP policy store is missing while its marker exists: restore it from the backup, or set `MC_UPSTREAM_POLICY_RECREATE=1` once (an empty policy with the default `deny`, with a warning at every start while the variable is set). If an update is refused with `downgrade_not_allowed`, the target is older than the installed version. If a provider connection asks for a new sign-in after the update, the stored refresh authorization was missing or revoked; reconnect with explicit consent. Never edit stored operation files or bypass a missing QA gate; capture sanitized log evidence without credentials.
+
+## Gateway 2.2.10 operator troubleshooting
+
+If **2.2.10** is announced but no valid update appears, verify the distribution's signed RSA-SHA256 `latest.json`, the release tag, installed platform, expected kit SHA256 and the Update Center's actual catalog status. A displayed version number alone does not make an installable signed release.
+
+If the MCP console shows the rule set but cannot save it, the policy of this image is read-only; the console then only displays it. If a rollback to 2.2.9 shows a 426 error on the pairing page behind a TLS proxy, `MC_WEB_TRUSTED_PROXIES` still contains a CIDR network, which 2.2.9 does not understand: replace it by single addresses first. Never edit stored operation files or bypass a missing QA gate, and capture sanitized log evidence without credentials.
