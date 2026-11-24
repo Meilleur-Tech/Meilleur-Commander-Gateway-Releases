@@ -4,20 +4,20 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.9** is the current RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. The immutable Gateway and matching Project Worker passed source/review checks, trusted build and independent R2 readback, isolated six-check QA install (including automatic rollback and resume after a restart), Gateway/WebUI/HTTPS and worker identity checks, and recursive binary-only package audits. Monitoring through an optional MCP provider still requires explicit provider OAuth consent and site/building permissions; no new access is granted by updating.
+Gateway **2.2.10** is the current RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. The immutable Gateway and matching Project Worker passed source/review checks and the trusted build with an independent readback; the isolated QA on the dedicated QA Gateway passed 6 of 6 checks (update, progress, resume after a restart, rollback, postcheck and binary-only package audit), and a real process start of the Project Worker was verified by hand. Monitoring through an optional MCP provider still requires explicit provider OAuth consent and site/building permissions; no new access is granted by updating.
 
 The signed Gateway Update Center offers the binary kits on the beta channel; **installation on PROD is a separate, explicit owner action**, never performed automatically by publishing this release.
 
-- [Gateway 2.2.9 official public release](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.9)
-- [Gateway 2.2.9 release notes](docs/RELEASE-NOTES-2.2.9.md)
-- [Gateway 2.2.9 SHA-256 asset inventory](docs/SHA256SUMS-2.2.9.txt)
+- [Gateway 2.2.10 official public release](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.10)
+- [Gateway 2.2.10 release notes](docs/RELEASE-NOTES-2.2.10.md)
+- [Gateway 2.2.10 SHA-256 asset inventory](docs/SHA256SUMS-2.2.10.txt)
 - [Installation and upgrade](docs/INSTALLATION.md)
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
 
 ## Previous release
 
-Gateway **2.2.8** remains available at its immutable [release tag](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.8), with [release notes](docs/RELEASE-NOTES-2.2.8.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.8.txt). The update catalog now selects 2.2.9 for a consenting owner, without modifying existing PROD installations.
+Gateway **2.2.9** remains available at its immutable [release tag](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.9), with [release notes](docs/RELEASE-NOTES-2.2.9.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.9.txt). The update catalog now selects 2.2.10 for a consenting owner, without modifying existing PROD installations.
 
 ## Supported Gateway packages
 
