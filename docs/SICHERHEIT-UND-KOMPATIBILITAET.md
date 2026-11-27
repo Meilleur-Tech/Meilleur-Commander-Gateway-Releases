@@ -66,3 +66,7 @@ The MCP console and the Server tab are a preview and do not widen access: OAuth 
 Gateway **2.2.11** preserves the pinned RSA-SHA256 v2 update catalog contract on x86_64 Debian/Ubuntu Linux VMs and Unraid. Release source `1749e9b1ef4b08c7aaea8f67b9f46dfb3dcd6dbb`, matching immutable Gateway/Worker OCI digests, independently checked original kits and a freshly signed real 7/7 isolated QA receipt bind the reviewed release. Only the catalog has an RSA-SHA256 release signature; the binary kits and manifest are verified through the signed catalog and their SHA-256 identities.
 
 The optional, owner-internal Hermes OAuth client-scope exception is default-off. Only the exact separately approved private SHA256 client fingerprint may enable it at the root `/mcp` endpoint; it does not open customer access, bypass existing upstream policy or modify legacy clients. Native desktop clients remain on separate channels. A public release does not install or activate anything on PROD, and rollback must retain a tested known-good version.
+
+## Gateway 2.2.12 security and compatibility
+
+The performance hotfix keeps live registration, policy, and schema-pin checks for tool execution. Cached discovery is scoped by authenticated client and session. The existing pinned RSA-SHA256 catalog signature, binary-only asset integrity and rollback contract remain unchanged. No new state migration or permissions are introduced by this release.

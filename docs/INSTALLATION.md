@@ -79,3 +79,7 @@ Keep the original pre-update backup and the known-good previous container until 
 For supported x86_64 Debian/Ubuntu Linux VMs and Unraid, **2.2.11** is installable only when the official signed `latest.json` has been published, its RSA-SHA256 signature verifies against the pinned key, and the platform kit/Project Worker identities match. The [2.2.11 SHA-256 inventory](SHA256SUMS-2.2.11.txt) includes `INSTALL.md`, the platform-release manifest and the unchanged original `meilleur-commander-linux-vm-2.2.11.tar.gz` and `meilleur-commander-unraid-2.2.11.tar.gz` kits.
 
 Use **Updates → Gateway-Updates**, retain the pre-update backup and previous known-good container, and confirm the update explicitly. Do not copy Docker images over a running Gateway or bypass catalog checks. Hermes owner-internal scope remains disabled until its fingerprint is activated separately; the publication itself cannot change PROD.
+
+## Gateway 2.2.12 update
+
+Use the signed Update Center only after version 2.2.12 appears in the verified catalog. The two x86_64 Linux VM and Unraid kits, platform manifest and installation instructions are listed in [the SHA-256 inventory](SHA256SUMS-2.2.12.txt). Retain a verified backup and known-good previous version.

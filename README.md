@@ -15,6 +15,10 @@ The signed Gateway Update Center offers the binary kits on the beta channel; **i
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
 
+## Prepared Gateway 2.2.12
+
+The approved performance hotfix 2.2.12 is being prepared for release. It adds optional compact discovery, scoped catalog caching and upstream timing. It is not installable until its signed catalog and immutable release are published. [Release notes](docs/RELEASE-NOTES-2.2.12.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.12.txt).
+
 ## Previous release
 
 Gateway **2.2.10** remains available at its immutable [release tag](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.10), with [release notes](docs/RELEASE-NOTES-2.2.10.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.10.txt). The 2.2.11 update catalog selects 2.2.11 for a consenting owner without modifying existing PROD installations.

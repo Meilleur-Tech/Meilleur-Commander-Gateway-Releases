@@ -69,3 +69,7 @@ If the MCP console shows the rule set but cannot save it, the policy of this ima
 If Gateway **2.2.11** is not offered, check the installed platform, the beta update channel, the RSA-SHA256 signature of `latest.json`, the immutable `v2.2.11` GitHub release assets and the matching [SHA-256 inventory](SHA256SUMS-2.2.11.txt). A release tag, version label or healthy QA container alone cannot authorize an installation.
 
 On failed update, follow the Recovery Plane operation status and verify the restored known-good image and backup. Before a downgrade to 2.2.9, change CIDR-form `MC_WEB_TRUSTED_PROXIES` values back to individual addresses as documented in the [2.2.11 notes](RELEASE-NOTES-2.2.11.md). Keep all secrets, OAuth client fingerprints, token values, private keys and customer data out of support reports.
+
+## Gateway 2.2.12 troubleshooting
+
+The upstream timing log reports connection, discovery and dispatch duration. The catalog cache and compact responses are opt-in. If the update is not offered, verify the signed catalog and immutable release; do not install an unverified kit. The remaining cross-instance cache eviction limitation is described in the [2.2.12 notes](RELEASE-NOTES-2.2.12.md).
