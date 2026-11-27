@@ -4,7 +4,7 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.11** is the next RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. It includes the owner-internal, default-disabled Hermes OAuth client-scope fix, process-worker improvements, MCP-console fixes and schema/runner hardening. The immutable Gateway and matching Project Worker were built from frozen Source commit `1749e9b1ef4b08c7aaea8f67b9f46dfb3dcd6dbb` and passed independent review and **7/7 real QA checks**, including rollback, resume, progress, postcheck, binary-only auditing and a live local worker process. Optional Hermes access requires separate explicit owner activation; existing authorization and customer policies are not changed by updating.
+Gateway **2.2.11** is the current RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. It includes the owner-internal, default-disabled Hermes OAuth client-scope fix, process-worker improvements, MCP-console fixes and schema/runner hardening. The immutable Gateway and matching Project Worker were built from frozen Source commit `1749e9b1ef4b08c7aaea8f67b9f46dfb3dcd6dbb` and passed independent review and **7/7 real QA checks**, including rollback, resume, progress, postcheck, binary-only auditing and a live local worker process. Optional Hermes access requires separate explicit owner activation; existing authorization and customer policies are not changed by updating.
 
 The signed Gateway Update Center offers the binary kits on the beta channel; **installation on PROD is a separate, explicit owner action**, never performed automatically by publication.
 
