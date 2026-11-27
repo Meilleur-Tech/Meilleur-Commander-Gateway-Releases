@@ -63,3 +63,9 @@ If `upstream_*` tools fail with `upstream_policy_unavailable`, the MCP policy st
 If **2.2.10** is announced but no valid update appears, verify the distribution's signed RSA-SHA256 `latest.json`, the release tag, installed platform, expected kit SHA256 and the Update Center's actual catalog status. A displayed version number alone does not make an installable signed release.
 
 If the MCP console shows the rule set but cannot save it, the policy of this image is read-only; the console then only displays it. If a rollback to 2.2.9 shows a 426 error on the pairing page behind a TLS proxy, `MC_WEB_TRUSTED_PROXIES` still contains a CIDR network, which 2.2.9 does not understand: replace it by single addresses first. Never edit stored operation files or bypass a missing QA gate, and capture sanitized log evidence without credentials.
+
+## Gateway 2.2.11 operator troubleshooting
+
+If Gateway **2.2.11** is not offered, check the installed platform, the beta update channel, the RSA-SHA256 signature of `latest.json`, the immutable `v2.2.11` GitHub release assets and the matching [SHA-256 inventory](SHA256SUMS-2.2.11.txt). A release tag, version label or healthy QA container alone cannot authorize an installation.
+
+On failed update, follow the Recovery Plane operation status and verify the restored known-good image and backup. Before a downgrade to 2.2.9, change CIDR-form `MC_WEB_TRUSTED_PROXIES` values back to individual addresses as documented in the [2.2.11 notes](RELEASE-NOTES-2.2.11.md). Keep all secrets, OAuth client fingerprints, token values, private keys and customer data out of support reports.

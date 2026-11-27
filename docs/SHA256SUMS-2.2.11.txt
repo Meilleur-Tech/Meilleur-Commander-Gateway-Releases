@@ -1,0 +1,4 @@
+1446bbf788642d59407ebbfd6fcce8b74c3f54d2ad0f135aa67e5a7f0a9aff4e  INSTALL.md
+d32ae2c9de888461a451ac691464c9f8c9f412739ef7ca9a29a1d0183c7437f1  meilleur-commander-2.2.11-platform-release.json
+8e6f6d17dc7517ad2a77ca259ea2a0370096b85ce6d7463cf4dab3c64f80bbf5  meilleur-commander-linux-vm-2.2.11.tar.gz
+0eb3cba4a9066146fd44ca889f4115dd57acd49981603b97d13ff3f20ccf4bab  meilleur-commander-unraid-2.2.11.tar.gz
