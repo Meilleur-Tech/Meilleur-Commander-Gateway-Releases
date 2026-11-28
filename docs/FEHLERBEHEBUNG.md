@@ -73,3 +73,7 @@ On failed update, follow the Recovery Plane operation status and verify the rest
 ## Gateway 2.2.12 troubleshooting
 
 The upstream timing log reports connection, discovery and dispatch duration. The catalog cache and compact responses are opt-in. If the update is not offered, verify the signed catalog and immutable release; do not install an unverified kit. The remaining cross-instance cache eviction limitation is described in the [2.2.12 notes](RELEASE-NOTES-2.2.12.md).
+
+## Gateway 2.2.13 troubleshooting
+
+For Control OAuth callback errors, check the exact HTTPS URL in the operator-configured allowlist, and retain PKCE. For upstream tools, copy the exact namespace from the catalog and omit guessed tenant/target. On an ambiguous operation outcome, stop and reconcile before retrying.

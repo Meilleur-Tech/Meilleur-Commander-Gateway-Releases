@@ -70,3 +70,7 @@ The optional, owner-internal Hermes OAuth client-scope exception is default-off.
 ## Gateway 2.2.12 security and compatibility
 
 The performance hotfix keeps live registration, policy, and schema-pin checks for tool execution. Cached discovery is scoped by authenticated client and session. The existing pinned RSA-SHA256 catalog signature, binary-only asset integrity and rollback contract remain unchanged. No new state migration or permissions are introduced by this release.
+
+## Gateway 2.2.13 security and compatibility
+
+Explicit HTTPS callbacks are opt-in and matched exactly; existing OAuth and PKCE checks remain active. The pinned RSA-SHA256 catalog verification and live upstream authorization and schema checks are unchanged.

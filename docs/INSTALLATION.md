@@ -83,3 +83,7 @@ Use **Updates → Gateway-Updates**, retain the pre-update backup and previous k
 ## Gateway 2.2.12 update
 
 Use the signed Update Center only after version 2.2.12 appears in the verified catalog. The two x86_64 Linux VM and Unraid kits, platform manifest and installation instructions are listed in [the SHA-256 inventory](SHA256SUMS-2.2.12.txt). Retain a verified backup and known-good previous version.
+
+## Gateway 2.2.13 update
+
+Use the signed Update Center only after 2.2.13 appears in the verified catalog. Keep a backup and the known-good prior image. See [SHA-256 inventory](SHA256SUMS-2.2.13.txt) and [release notes](RELEASE-NOTES-2.2.13.md). Configure the exact HTTPS OAuth callback only when required.

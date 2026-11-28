@@ -4,24 +4,22 @@ This repository distributes binary-only Gateway and Project Worker releases for 
 
 ## Current release
 
-Gateway **2.2.11** is the current RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. It includes the owner-internal, default-disabled Hermes OAuth client-scope fix, process-worker improvements, MCP-console fixes and schema/runner hardening. The immutable Gateway and matching Project Worker were built from frozen Source commit `1749e9b1ef4b08c7aaea8f67b9f46dfb3dcd6dbb` and passed independent review and **7/7 real QA checks**, including rollback, resume, progress, postcheck, binary-only auditing and a live local worker process. Optional Hermes access requires separate explicit owner activation; existing authorization and customer policies are not changed by updating.
+Gateway **2.2.12** is the current RSA-SHA256 signed Public Latest for supported x86_64 Debian/Ubuntu Linux VM and Unraid hosts. It introduces compact upstream discovery, scoped catalog caching and timing. Installation on PROD remains an explicit owner action.
 
-The signed Gateway Update Center offers the binary kits on the beta channel; **installation on PROD is a separate, explicit owner action**, never performed automatically by publication.
-
-- [Gateway 2.2.11 official public release](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.11)
-- [Gateway 2.2.11 release notes](docs/RELEASE-NOTES-2.2.11.md)
-- [Gateway 2.2.11 SHA-256 asset inventory](docs/SHA256SUMS-2.2.11.txt)
+- [Gateway 2.2.12 official public release](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.12)
+- [Gateway 2.2.12 release notes](docs/RELEASE-NOTES-2.2.12.md)
+- [Gateway 2.2.12 SHA-256 asset inventory](docs/SHA256SUMS-2.2.12.txt)
 - [Installation and upgrade](docs/INSTALLATION.md)
 - [Troubleshooting](docs/FEHLERBEHEBUNG.md)
 - [Security and compatibility](docs/SICHERHEIT-UND-KOMPATIBILITAET.md)
 
-## Prepared Gateway 2.2.12
+## Prepared Gateway 2.2.13
 
-The approved performance hotfix 2.2.12 is being prepared for release. It adds optional compact discovery, scoped catalog caching and upstream timing. It is not installable until its signed catalog and immutable release are published. [Release notes](docs/RELEASE-NOTES-2.2.12.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.12.txt).
+The reviewed Gateway 2.2.13 adds explicit HTTPS OAuth callbacks, improved upstream tool guidance and per-instance cache invalidation. It is not installable until its signed catalog and immutable release are published. [Release notes](docs/RELEASE-NOTES-2.2.13.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.13.txt).
 
 ## Previous release
 
-Gateway **2.2.10** remains available at its immutable [release tag](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.10), with [release notes](docs/RELEASE-NOTES-2.2.10.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.10.txt). The 2.2.11 update catalog selects 2.2.11 for a consenting owner without modifying existing PROD installations.
+Gateway **2.2.11** remains available at its immutable [release tag](https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/tag/v2.2.11), with [release notes](docs/RELEASE-NOTES-2.2.11.md) and [SHA-256 inventory](docs/SHA256SUMS-2.2.11.txt).
 
 ## Supported Gateway packages
 
