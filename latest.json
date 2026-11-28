@@ -1,25 +1,25 @@
 {
   "channel": "beta",
-  "gateway_oci_digest": "sha256:c2b7a95e4d788c3c1cc59e069a0ea915e9d0cfff7cd45bfa44de359c50df7b17",
+  "gateway_oci_digest": "sha256:eafd8ca38cf3c6ee75a2a81e438274ba58e13a5b63a7aa235314bec670b282f5",
   "kits": {
     "linux-vm": {
-      "bytes": 922254702,
-      "sha256": "acde3781e5c4dbb5cb7e0ab18169d798bed9c7d9a147908a5f3ab0291f073c05",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.12/meilleur-commander-linux-vm-2.2.12.tar.gz"
+      "bytes": 922273762,
+      "sha256": "d63936727f7cce8f604d0921afbdf37b898da35a97926dba750fb7351ab487ab",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.13/meilleur-commander-linux-vm-2.2.13.tar.gz"
     },
     "unraid": {
-      "bytes": 922265310,
-      "sha256": "117c969f3163a3105b505e9ae5b58bf98a93c8ee92802502aa156017f352bed1",
-      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.12/meilleur-commander-unraid-2.2.12.tar.gz"
+      "bytes": 922284979,
+      "sha256": "1f8daaa4a2345f497e5744a88047d2580702544893010b8368b4a1a7aa2e569e",
+      "url": "https://github.com/Meilleur-Tech/Meilleur-Commander-Gateway-Releases/releases/download/v2.2.13/meilleur-commander-unraid-2.2.13.tar.gz"
     }
   },
-  "notes": "# Fabric Commander Gateway 2.2.12\n\n**Version:** 2.2.12  \n**Freigegebener Source-Commit:** `e9fd908ff2d1e55ff4ab83aa7277f854bc10dc20`  \n**Plattformen:** x86_64 Debian/Ubuntu Linux-VM und Unraid.\n\n## \u00c4nderungen gegen\u00fcber 2.2.11\n\n- Upstream-Policy-Klassifikationen werden geb\u00fcndelt aus der Datenbank gelesen; die bestehenden Live-Autorisierungs- und Schema-Pr\u00fcfungen bleiben erhalten.\n- Optionaler gefilterter und kompakter Tool-Katalog (`query`, `compact`), optionaler Katalog-Cache bis 300 Sekunden je authentifiziertem Client-/Session-Scope (`max_age_seconds`).\n- `compact_result=true` entfernt ausschlie\u00dflich identische, doppelte JSON-Textrepr\u00e4sentationen; keine fachlichen Daten werden verworfen. Standardantworten bleiben kompatibel.\n- Laufzeitmessungen f\u00fcr Verbindung, Discovery und Ausf\u00fchrung sind im normalen Gateway-Log sichtbar, ohne Argumente oder Ergebnisse zu protokollieren.\n- Parallel aktive Chat-Sessions verdr\u00e4ngen bei erfolgreichen Katalogabfragen nicht mehr gegenseitig ihre Cache-Eintr\u00e4ge.\n\n## Bekannte Einschr\u00e4nkung\n\nEin Fehler einer Upstream-Verbindung kann auch g\u00fcltige Cache-Eintr\u00e4ge anderer Verbindungen verwerfen. Die Ausf\u00fchrung bleibt funktionsf\u00e4hig; die Cache-Invalidierung je Instanz folgt in 2.2.13. Die tats\u00e4chliche Ende-zu-Ende-Beschleunigung ist noch nicht gemessen. Verbindungspooling und generische Ergebnis-Pagination sind nicht enthalten.\n\n## Installation und Update\n\nDie beiden binary-only-Kits f\u00fcr Linux-VM und Unraid werden \u00fcber den RSA-SHA256-signierten Gateway-Katalog und die dort gebundenen SHA-256-Pr\u00fcfsummen angeboten. \u00dcber das Gateway Update Center die Version ausw\u00e4hlen und die Installation bewusst best\u00e4tigen. Vorher ausreichend freien Speicher, verifiziertes Backup und bekannte gesunde Vorversion sicherstellen. Die Ver\u00f6ffentlichung allein installiert nichts auf PROD.\n\n## Rollback und Wiederherstellung\n\nDie Recovery Plane bewahrt den bekannten gesunden Vorg\u00e4nger und stellt ihn bei fehlgeschlagenem Update/Healthcheck automatisch wieder her. Ein bestehender Vorgang mit unbekanntem Ergebnis muss erst abgeglichen werden. Bei einem Rollback auf Gateway 2.2.9 gelten die Betreiberhinweise zu CIDR-Eintr\u00e4gen in MC_WEB_TRUSTED_PROXIES aus 2.2.10.\n\n## Kompatibilit\u00e4t und Sicherheit\n\nNative macOS-, Windows- und Linux-Clients haben separate Releasekan\u00e4le. Es erfolgt keine State-Migration. Katalogsignatur, Quellidentit\u00e4t, Paketpr\u00fcfsummen und Recovery-Checks d\u00fcrfen nicht deaktiviert werden. Die neuen kompakten und Cache-Optionen sind opt-in; Clients m\u00fcssen sie aktiv nutzen.",
-  "published_at": "2026-11-27T21:45:28Z",
+  "notes": "# Fabric Commander Gateway 2.2.13\n\n**Version:** 2.2.13\n**Freigegebener Source-Commit:** `753ef2c54d4e64677d648e9c9deb18debbacb425`\n**Plattformen:** x86_64 Debian/Ubuntu Linux-VM und Unraid.\n\n## \u00c4nderungen gegen\u00fcber 2.2.12\n\n- #2131: Explizite, standardm\u00e4\u00dfig leere HTTPS-Callback-Allowlist f\u00fcr OAuth. Der Betreiber muss die exakte Control-R\u00fccksprungadresse \u00fcber `MC_OAUTH_HTTPS_REDIRECT_URIS` konfigurieren. Bestehende OAuth-Regeln und PKCE S256 bleiben aktiv.\n- #2135: Klarere Tool-Beschreibungen und MCP-Fehlerhinweise. Namespace aus dem Katalog \u00fcbernehmen, registrierten Scope verwenden und nicht raten. Interne Fehlergr\u00fcnde f\u00fcr Audit und Parit\u00e4tsbericht bleiben unver\u00e4ndert.\n- #2138: Fehler invalidieren nur den Katalog-Cache der betroffenen Upstream-Instanz.\n\n## Installation und Update\n\nBeide binary-only-Kits werden \u00fcber den RSA-SHA256-signierten Gateway-Katalog und die gebundenen SHA-256-Pr\u00fcfsummen angeboten. \u00dcber das Gateway Update Center bewusst installieren, vorher Backup und freien Speicher pr\u00fcfen. F\u00fcr Control nach Installation die exakte HTTPS-R\u00fccksprungadresse im Betreiber-Environment konfigurieren und den normalen Neustart verwenden. Keine automatische PROD-Konfigurations\u00e4nderung.\n\n## Rollback und Wiederherstellung\n\nDie Recovery Plane stellt bei fehlgeschlagenem Update den bekannten gesunden Vorg\u00e4nger wieder her. Vorg\u00e4nge mit unbekanntem Ergebnis vor einem erneuten Versuch abgleichen. Backup und vorherige Images bis erfolgreichem Postcheck behalten.\n\n## Kompatibilit\u00e4t und Sicherheit\n\nNative Desktop-Clients haben separate Releasekan\u00e4le. Keine automatische Rechteerweiterung. Katalogsignatur, Quellidentit\u00e4t, Paketpr\u00fcfsummen und Recovery-Checks bleiben verbindlich. Der vollst\u00e4ndige Control-OAuth-Rundlauf und die Hermes-Latenz-Nachmessung bleiben Laufzeitabnahme; Verbindungspooling ist nicht enthalten.",
+  "published_at": "2026-11-28T08:06:19Z",
   "schema": "meilleur-commander-gateway-update/v2",
-  "source_sha": "e9fd908ff2d1e55ff4ab83aa7277f854bc10dc20",
-  "source_tree": "8e2d51e07608e5d68d85f5e28457ff150077ab09",
+  "source_sha": "753ef2c54d4e64677d648e9c9deb18debbacb425",
+  "source_tree": "68e452b6825d94c8799b2d69c99f372b7d15687c",
   "status": "published",
-  "tag": "v2.2.12",
-  "version": "2.2.12",
-  "worker_oci_digest": "sha256:26f0662a96c0b9acd8c52c1175ad0109f24d5b47282e488dfb7dbb5d3b14a82f"
+  "tag": "v2.2.13",
+  "version": "2.2.13",
+  "worker_oci_digest": "sha256:ed8123b09ad4eaaeb80a72b01951aa13f64e73ceeb263dd91162d07dede75d75"
 }
